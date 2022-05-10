@@ -1,5 +1,6 @@
 .nav_main{
-    padding: var(--r32) 0;
+    padding-top: var(--r32);
+    padding-bottom: var(--r64);
 }
 /* .nav_logo{
     mix-blend-mode: difference;

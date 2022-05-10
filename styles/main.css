@@ -70,6 +70,12 @@ body.dark{
     overscroll-behavior-y: none;
     transition: all 0.2s ease-out;
 }
+body.dark hr{
+    border-color: var(--bg100);
+}
+body.dark  svg path{
+    stroke: var(--bg100);
+}
 
 img,
 video {
@@ -166,6 +172,13 @@ select {
     line-height: 1.2;
 }
 
+.t-heading-500m {
+    font-family: var(--default-font);
+    font-size: clamp(32px, calc((64 / (var(--screen) / 100)) * 1vw), 85px);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
 .t-heading-500 {
     font-family: var(--default-font);
     font-size: clamp(32px, calc((64 / (var(--screen) / 100)) * 1vw), 85px);
@@ -195,6 +208,13 @@ select {
     line-height: 2;
 }
 
+.t-tagline-50r {
+    font-family: var(--default-font);
+    font-size: clamp(12px, calc((13 / (var(--screen) / 100)) * 1vw), 14px);
+    font-weight: 400;
+    line-height: 1.25;
+}
+
 .t-tagline-50 {
     font-family: var(--default-font);
     font-size: clamp(12px, calc((13 / (var(--screen) / 100)) * 1vw), 14px);
@@ -211,7 +231,7 @@ select {
 
 .t-tagline-100r {
     font-family: var(--default-font);
-    font-size: clamp(16px, calc((16 / (var(--screen) / 100)) * 1vw), 24px);
+    font-size: clamp(14px, calc((16 / (var(--screen) / 100)) * 1vw), 24px);
     font-weight: 400;
     line-height: 1.5;
 }

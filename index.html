@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/components/nav.css" />
+    <link rel="stylesheet" href="styles/pages/homepage.css" />
     <title>Stone Age</title>
   </head>
   <body class="dark">
     <main class="page__container">
-      <nav class="nav_main">
+      <header class="nav_main">
         <div class="nav_container flex items-center">
           <img
             class="nav_logo"
@@ -20,7 +21,70 @@
             height="auto"
           />
         </div>
-      </nav>
+      </header>
+      <section class="mast-section_container">
+        <div class="mast-section_wrapper">
+          <div class="mast-section_image-container">
+            <img
+              src="assets/masthead.svg"
+              alt="masthead image"
+              class="masthead-image"
+            />
+            <img
+              src="assets/masthead-vector.svg"
+              alt="masthead image vector"
+              class="masthead-image-vector"
+            />
+          </div>
+          <div class="masthead-section_content-container">
+            <div class="masthead-section_content-wrapper">
+              <h1 class="t-heading-500m">
+                Lorem ipsum
+                <br />
+                dolor sit amet.
+              </h1>
+              <div class="masthead-section_date-container">
+                <small class="t-tagline-50r">01 | 01 | 22</small>
+                <hr />
+              </div>
+              <div class="masthead-section_para-container">
+                <p class="t-tagline-100r">
+                  Aenean molestie vestibulum ultrices. Donec nisi elit,
+                  tristique sit amet diam eget, cursus vulputate sem. In nec
+                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                  vulputate neque at elementum....
+                </p>
+              </div>
+              <div class="masthead-section_cta-container">
+                <div class="masthead-section_cta-link">
+                  <small class="t-tagline-100r">Read more.</small>
+                  <svg
+                    width="15"
+                    height="15"
+                    viewBox="0 0 17 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <hr />
+              </div>
+            </div>
+            <div class="masthead-section_category-container">
+              <h2 class="t-heading-500m">
+                Latest <br />
+                Stories.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
       <button onclick="handleThemeToggle()">toggle</button>
     </main>
     <script
