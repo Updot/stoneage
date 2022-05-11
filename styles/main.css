@@ -6,6 +6,7 @@
     --bg150: #E7E7E7;
     --bg200: #111111;
     --bg300: #000;
+    --bg400: #202020;
     --text100: #fff;
     --text200: #000;
     --default-font: "Poppins", sans-serif;
@@ -171,6 +172,12 @@ select {
     font-weight: 400;
     line-height: 1.2;
 }
+.t-heading-400 {
+    font-family: var(--default-font);
+    font-size: clamp(24px, calc((40 / (var(--screen) / 100)) * 1vw), 54px);
+    font-weight: 700;
+    line-height: 1.2;
+}
 
 .t-heading-500m {
     font-family: var(--default-font);
@@ -316,7 +323,9 @@ select {
 .items-center {
     align-items: center;
 }
-
+.items-end {
+    align-items: flex-end;
+}
 .relative {
     position: relative;
 }
