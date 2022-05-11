@@ -3,6 +3,7 @@
 :root {
     --accent: #FFAD76;
     --bg100: #fff;
+    --bg150: #E7E7E7;
     --bg200: #111111;
     --bg300: #000;
     --text100: #fff;
@@ -47,7 +48,7 @@
     border-style: solid;
 }
 
-body {
+body{
     font-family: var(--default-font);
     color: var(--text200);
     line-height: inherit;
@@ -55,11 +56,11 @@ body {
     min-height: 100%;
     flex-direction: column;
     background-color: var(--bg100);
-    overscroll-behavior-y: none;
     transition: all 0.2s ease-out;
 }
 
 body.dark{
+    position: relative;
     font-family: var(--default-font);
     color: var(--text100);
     line-height: inherit;
@@ -67,7 +68,6 @@ body.dark{
     min-height: 100%;
     flex-direction: column;
     background-color: var(--bg200);
-    overscroll-behavior-y: none;
     transition: all 0.2s ease-out;
 }
 body.dark hr{
@@ -351,7 +351,7 @@ select {
     width: 100%;
     padding-left: var(--r-container);
     padding-right: var(--r-container);
-    max-width: calc(1610px + var(--r-container) * 2);
+    /* max-width: calc(1610px + var(--r-container) * 2); */
 }
 
 @media (max-width: 768px) {

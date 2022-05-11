@@ -1,5 +1,5 @@
 const body = document.querySelector("body");
-const nav_logo = document.querySelector(".nav_logo");
+const header_logo = document.querySelector(".header_logo");
 
 // theme fetch
 window.onload = () => {
@@ -7,7 +7,7 @@ window.onload = () => {
   themeMode === "dark"
     ? body.classList.add("dark")
     : body.classList.remove("dark");
-  handleNavLogoChange();
+  handleHeaderLogoChange();
 };
 
 //theme toggle
@@ -16,11 +16,11 @@ const handleThemeToggle = () => {
   body.classList.value === "dark"
     ? localStorage.setItem("theme", "dark")
     : localStorage.setItem("theme", "light");
-  handleNavLogoChange();
+  handleHeaderLogoChange();
 };
 
-const handleNavLogoChange = () => {
+const handleHeaderLogoChange = () => {
   body.classList.value === "dark"
-    ? (nav_logo.src = "./assets/logo_dark.svg")
-    : (nav_logo.src = "./assets/logo.svg");
+    ? (header_logo.src = "./assets/logo_dark.svg")
+    : (header_logo.src = "./assets/logo.svg");
 };
