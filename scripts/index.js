@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 const header_logo = document.querySelector(".header_logo");
-
+const footer_logo = document.querySelector(".footer_logo");
 // theme fetch
 window.onload = () => {
   const themeMode = localStorage.getItem("theme");
@@ -21,6 +21,8 @@ const handleThemeToggle = () => {
 
 const handleHeaderLogoChange = () => {
   body.classList.value === "dark"
-    ? (header_logo.src = "./assets/logo_dark.svg")
-    : (header_logo.src = "./assets/logo.svg");
+    ? ((header_logo.src = "./assets/logo_dark.svg"),
+      (footer_logo.src = "./assets/logo-big_dark.svg"))
+    : ((header_logo.src = "./assets/logo.svg"),
+      (footer_logo.src = "./assets/logo-big_light.svg"));
 };

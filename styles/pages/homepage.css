@@ -46,11 +46,9 @@
 }
 .masthead-section_date-container{
     width: 100%;
-    mix-blend-mode: difference;
 }
 .masthead-section_date-container hr, .masthead-section_cta-container hr, .article-content hr{
     border-bottom: solid var(--bg200) 1px; 
-    mix-blend-mode: difference;   
 }
 .masthead-section_para-container p{
     width: 100%;
