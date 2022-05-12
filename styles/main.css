@@ -2,6 +2,7 @@
 
 :root {
     --accent: #FFAD76;
+    --bg50: #373737;
     --bg100: #fff;
     --bg150: #E7E7E7;
     --bg200: #111111;
@@ -96,7 +97,7 @@ object {
     display: block;
 }
 
-a {
+a, a:hover {
     color: inherit;
     text-decoration: inherit;
 }
