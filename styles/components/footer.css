@@ -1,5 +1,6 @@
 footer{
     padding: var(--r80) var(--r64);
+    
 }
 .footer_container{
     display: flex;
@@ -49,4 +50,22 @@ body.dark .footer_col-1 {
     display: flex;
     align-items: center;
     column-gap: 1rem;
+    padding-bottom: var(--r32);
+}
+
+@media screen and (max-width: 480px){
+    .footer_links{
+        column-gap: 1rem;
+    }
+    .footer_col-1 {
+        width: 100%;
+        
+        row-gap: 1rem;
+        padding: 0 var(--r30);
+    }
+    .footer_col-2 {
+        background-color: var(--accent);
+        width: 100%;
+       
+    }
 }

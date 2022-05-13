@@ -16,6 +16,10 @@
     overflow: hidden;
     width: auto;
     height: auto;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-position: center;
+
 }
 .masthead-image{
     width: 100%;
@@ -33,11 +37,11 @@
     flex-direction: column;
     justify-content: flex-start;
     width: auto;
-    height: auto;
+    height: auto;    
 }
 .masthead-section_content-wrapper{
-    position: absolute;
-    top: -84px;
+    /* position: absolute;
+    top: -84px; */
 }
 .masthead-section_content-container h1{
     margin-bottom: var(--r64);
@@ -61,19 +65,18 @@
     justify-content: space-between; 
 }
 .masthead-section_cta-link svg path, .article_content_cta-link svg path, .category_content_cta-link svg path{
-    stroke: var(--bg200);
+    stroke: var(--accent);
 }
 .masthead-section_category-container{
-    position: absolute;
     background-color: var(--accent);
     width: 180px;
-    height: 180px;
-    bottom: 40px;
-    left: 30%;    
-    margin-left: auto;
-    margin-right: auto;
+    height: 180px; 
     display: flex;
+    margin-right: auto;
     align-items: center;
+    position: absolute;
+    top: 10%;
+    left: -45%;
 }
 .masthead-section_category-container h2 {
     margin-left: var(--r72);
@@ -135,8 +138,9 @@ body.dark .pagination_container{
     transform: rotate(180deg);
 }
 .pagenum_container{
-    display: inline-flex;
-    column-gap: 1rem;
+    display:flex;
+    flex-wrap: wrap;
+   gap: 1rem;
 }
 .pagenum_btn{
     width: 2rem;
@@ -312,39 +316,46 @@ body.dark .newsletter_submit-btn svg path {
     .mast-section_wrapper{
         grid-template-columns: 1fr;
     }
+    .mast-section_image-container {
+        position: relative;
+        /* overflow: hidden; */
+        width: auto;
+        height: 50vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+    }
     .mast-section_image-container .masthead-image-vector{
         width: 100%;
         border-bottom: solid var(--bg200) 1px;
     }
     body.dark .mast-section_image-container .masthead-image-vector {        
         border-bottom: solid var(--bg100) 1px;
-    }
-    .masthead-section_content-wrapper{
-        position: unset;
-        top: unset;
-    }
+    }  
     .masthead-section_content-container h1 {
         margin-bottom: var(--r16);      
     }
-    .masthead-section_category-container {
-        position: unset;
+    .masthead-section_category-container { 
+        position: unset;     
         background-color: var(--accent);
         width: 100px;
         height: 100px;
         display: flex;
-        align-items: center;
-        bottom: 0;
+        align-items: center;   
         margin-top: var(--r30);
-        margin-bottom: var(--r48);
-        margin-left: unset;
+        margin-bottom: var(--r48); 
         margin-right: auto;
     }  
     .articles_col{
         width: 100%;
     }    
     .pagination_wrapper{
-    column-gap: 2rem;
+    column-gap: 1rem;
     }
+    .pagenum_btn:nth-child(4), .pagenum_btn:nth-child(5), .pagenum_btn:nth-child(6), .pagenum_btn:nth-child(7){
+        display: none;
+    }    
     .categories_col{
         width: 100%;
         padding-top: var(--r64);
@@ -368,6 +379,10 @@ body.dark .newsletter_submit-btn svg path {
     .article_content-wrapper{
         max-width: 200px;
         height: 200px;
+    }
+    .navigation-btn-p svg,
+    .navigation-btn-n svg {
+        width: 40px;
     }
     .category_container .flex{
         display: none;

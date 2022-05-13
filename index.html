@@ -1,746 +1,552 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link rel="stylesheet" href="styles/components/header.css" />
-    <link rel="stylesheet" href="styles/pages/homepage.css" />
-    <link rel="stylesheet" href="styles/components/nav.css" />
-    <link rel="stylesheet" href="styles/components/footer.css" />
-    <title>Stone Age</title>
-  </head>
-  <body>
-    <main class="page__container">
-      <!--                                                Header                                                            -->
-      <header class="header_main">
-        <div class="header_container flex items-center">
-          <img
-            class="header_logo"
-            src="assets/logo.svg"
-            alt="stone age logo"
-            width="80"
-            height="auto"
-          />
-        </div>
-      </header>
 
-      <!--                                                Masthead                                                            -->
-      <section class="mast-section_container">
-        <div class="mast-section_wrapper">
-          <div class="mast-section_image-container">
-            <img
-              src="assets/masthead.svg"
-              alt="masthead image"
-              class="masthead-image"
-            />
-            <img
-              src="assets/masthead-vector.svg"
-              alt="masthead image vector"
-              class="masthead-image-vector"
-            />
-          </div>
-          <div class="masthead-section_content-container">
-            <div class="masthead-section_content-wrapper">
-              <h1 class="t-heading-500m">
-                Lorem ipsum
-                <br />
-                dolor sit amet.
-              </h1>
-              <div class="masthead-section_date-container">
-                <p class="t-tagline-50r">01 | 01 | 22</p>
-                <hr />
-              </div>
-              <div class="masthead-section_para-container">
-                <p class="t-tagline-100r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum....
-                </p>
-              </div>
-              <div class="masthead-section_cta-container">
-                <div class="masthead-section_cta-link">
-                  <small class="t-tagline-100r">Read more.</small>
-                  <svg
-                    width="15"
-                    height="15"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
-            </div>
-            <div class="masthead-section_category-container">
-              <h2 class="t-heading-500m">
-                Latest <br />
-                Stories.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </section>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/components/header.css" />
+  <link rel="stylesheet" href="styles/components/story.css" />
+  <link rel="stylesheet" href="styles/pages/homepage.css" />
+  <link rel="stylesheet" href="styles/components/nav.css" />
+  <link rel="stylesheet" href="styles/components/footer.css" />
+  <title>Stone Age</title>
+</head>
 
-      <!--                                                Navbar                                                            -->
-      <nav>
-        <div class="nav_main">
-          <div class="nav_section">
-            <div class="nav_item">
-              <img
-                class="nav_item_logo"
-                src="assets/logo2.svg"
-                alt="stone age logo"
-              />
-            </div>
-            <div class="nav_item nav_item_social">
-              <img src="assets/youtube.svg" alt="stone age youtube" />
-            </div>
-            <div class="nav_item nav_item_social">
-              <img src="assets/twitter.svg" alt="stone age twitter" />
-            </div>
-            <div class="nav_item nav_item_social">
-              <img src="assets/instagram.svg" alt="stone age instagram" />
-            </div>
-            <div
-              class="nav_item nav_search_btn"
-              onclick="handleSearchBarToggle()"
-            >
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 28 28"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M22.1942 19.8067C21.6477 19.2833 21.1159 18.7448 20.5993 18.192C20.1653 17.751 19.904 17.4302 19.904 17.4302L16.6373 15.8703C17.9451 14.3871 18.6669 12.4776 18.6673 10.5002C18.6673 5.998 15.004 2.3335 10.5007 2.3335C5.99732 2.3335 2.33398 5.998 2.33398 10.5002C2.33398 15.0023 5.99732 18.6668 10.5007 18.6668C12.5575 18.6668 14.4323 17.8968 15.8708 16.638L17.4307 19.9047C17.4307 19.9047 17.7515 20.166 18.1925 20.6C18.644 21.0235 19.2378 21.5963 19.8072 22.1948L21.3915 23.8188L22.0962 24.5725L24.5707 22.098L23.817 21.3933C23.3748 20.9593 22.7845 20.383 22.1942 19.8067V19.8067ZM10.5007 16.3335C7.28415 16.3335 4.66732 13.7167 4.66732 10.5002C4.66732 7.28366 7.28415 4.66683 10.5007 4.66683C13.7172 4.66683 16.334 7.28366 16.334 10.5002C16.334 13.7167 13.7172 16.3335 10.5007 16.3335Z"
-                  fill="#8E8E8E"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="nav_section">
-            <div class="nav_item sub_nav_btn" onclick="handleSubNavToggle()">
-              <svg
-                width="37"
-                height="31"
-                viewBox="0 0 37 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle cx="8" cy="8" r="8" />
-                <ellipse cx="28" cy="12.5" rx="9" ry="8.5" />
-                <circle cx="13.5" cy="25.5" r="5.5" />
-              </svg>
-            </div>
-          </div>
-          <div class="nav_section">
-            <div class="nav_item_category">
-              <a href="#" class="t-tagline-50r">category 1</a>
-            </div>
-            <div class="nav_item_category">
-              <a href="#" class="t-tagline-50r">category 2</a>
-            </div>
-            <div class="nav_item_category">
-              <a href="#" class="t-tagline-50r">category 3</a>
-            </div>
-            <div class="nav_item_category">
-              <a href="#" class="t-tagline-50r">category 4</a>
-            </div>
-          </div>
-        </div>
+<body>
+  <main class="page__container">
+    <!--                                                Header                                                            -->
+    <header class="header_main">
+      <div class="header_container flex items-center">
+        <img class="header_logo" src="assets/logo.svg" alt="stone age logo" width="80" height="auto" />
+      </div>
+    </header>
 
-        <!-- subnav -->
-        <div class="sub_nav">
-          <div class="sub_nav_items">
-            <div class="sub_nav_item">
-              <a href="#" class="sub_nav_link">HOME</a>
-            </div>
-            <div class="sub_nav_item">
-              <a href="#" class="sub_nav_link">ABOUT</a>
-            </div>
-            <div class="sub_nav_item">
-              <a href="javascript:void(0)" onclick="handleThemeToggle()">
-                <img
-                  class="theme_toggle"
-                  src="assets/dark-icon.svg"
-                  alt="theme icon"
-                />
-              </a>
-            </div>
-            <div class="sub_nav_item">
-              <a href="#" class="sub_nav_link">CONTACT</a>
-            </div>
-            <div class="sub_nav_item">
-              <a href="#" class="sub_nav_link">ADVERTISE</a>
-            </div>
-          </div>
+    <!--                                                Masthead                                                            -->
+    <section class="mast-section_container">
+      <div class="mast-section_wrapper">
+        <div class="mast-section_image-container" style="background-image: url(assets/masthead.svg);">
+          <!-- <img src="assets/masthead.svg" alt="masthead image" class="masthead-image" /> -->
+          <img src="assets/masthead-vector.svg" alt="masthead image vector" class="masthead-image-vector" />
         </div>
-        <!-- search -->
-        <div class="search_bar">
-          <div class="search_bar-container">
-            <input type="search" class="nav_search_bar" />
-            <button class="nav_serach_bar-btn">search</button>
-          </div>
-        </div>
-      </nav>
-
-      <!--                                                Articles                                                            -->
-      <section class="articles_section">
-        <h2 class="t-heading-500m">
-          Published
-          <br />Articles.
-        </h2>
-        <div class="row articles_section-container">
-          <div class="col-8 articles_col">
-            <div class="article_container">
-              <div class="article_image-wrapper">
-                <img src="assets/articles.svg" alt="article image" />
-              </div>
-              <div class="article_content-wrapper">
-                <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-                <p class="t-tagline-50r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum.
-                </p>
-                <div class="article_content_cta-link">
-                  <small class="t-tagline-50r">Read more.</small>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
+        <div class="masthead-section_content-container">
+          <div class="masthead-section_content-wrapper">
+            <h1 class="t-heading-500m">
+              Lorem ipsum
+              <br />
+              dolor sit amet.
+            </h1>
+            <div class="masthead-section_date-container">
+              <p class="t-tagline-50r">01 | 01 | 22</p>
+              <hr />
             </div>
-            <!-- 2 -->
-            <div class="article_container">
-              <div class="article_image-wrapper">
-                <img src="assets/articles.svg" alt="article image" />
-              </div>
-              <div class="article_content-wrapper">
-                <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-                <p class="t-tagline-50r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum.
-                </p>
-                <div class="article_content_cta-link">
-                  <small class="t-tagline-50r">Read more.</small>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
-            </div>
-            <!-- 3 -->
-            <div class="article_container">
-              <div class="article_image-wrapper">
-                <img src="assets/articles.svg" alt="article image" />
-              </div>
-              <div class="article_content-wrapper">
-                <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-                <p class="t-tagline-50r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum.
-                </p>
-                <div class="article_content_cta-link">
-                  <small class="t-tagline-50r">Read more.</small>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
-            </div>
-            <!-- 4 -->
-            <div class="article_container">
-              <div class="article_image-wrapper">
-                <img src="assets/articles.svg" alt="article image" />
-              </div>
-              <div class="article_content-wrapper">
-                <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-                <p class="t-tagline-50r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum.
-                </p>
-                <div class="article_content_cta-link">
-                  <small class="t-tagline-50r">Read more.</small>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
-            </div>
-            <!-- 5 -->
-            <div class="article_container">
-              <div class="article_image-wrapper">
-                <img src="assets/articles.svg" alt="article image" />
-              </div>
-              <div class="article_content-wrapper">
-                <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-                <p class="t-tagline-50r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum.
-                </p>
-                <div class="article_content_cta-link">
-                  <small class="t-tagline-50r">Read more.</small>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
-            </div>
-            <div class="pagination_container">
-              <div class="pagination_wrapper">
-                <div class="navigation-btn-p">
-                  <svg
-                    width="160"
-                    height="20"
-                    viewBox="0 0 240 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 10.5146H123.5"
-                      stroke="black"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M114.956 1.00014L123.941 9.98535L114.956 18.9706"
-                      stroke="black"
-                      stroke-width="2"
-                    />
-                  </svg>
-                  <small class="t-tagline-50r">Previous</small>
-                </div>
-                <div class="pagenum_container">
-                  <div class="pagenum_btn">1</div>
-                  <div class="pagenum_btn active">2</div>
-                  <div class="pagenum_btn">3</div>
-                  <div class="pagenum_btn">4</div>
-                  <div class="pagenum_btn">5</div>
-                  <div class="pagenum_btn">6</div>
-                  <div class="pagenum_btn">7</div>
-                </div>
-                <div class="navigation-btn-n">
-                  <small class="t-tagline-50r">Next</small>
-                  <svg
-                    width="160"
-                    height="20"
-                    viewBox="0 0 240 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 10.5146H123.5"
-                      stroke="black"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M114.956 1.00014L123.941 9.98535L114.956 18.9706"
-                      stroke="black"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Category -->
-          <div class="mob-category_lable">
-            <div class="flex items-center">
-              <button class="category_btn">More articles</button>
-              <svg
-                width="60"
-                height="20"
-                viewBox="0 0 126 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
-                <path
-                  d="M114.956 1.00014L123.941 9.98535L114.956 18.9706"
-                  stroke="black"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-          </div>
-          <div class="col-4 categories_col">
-            <div class="category_container">
-              <div class="flex items-center">
-                <button class="category_btn">category 1</button>
-                <svg
-                  width="60"
-                  height="20"
-                  viewBox="0 0 126 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
-                  <path
-                    d="M114.956 1.00014L123.941 9.98535L114.956 18.9706"
-                    stroke="black"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
-              <div class="category_image-wrapper">
-                <img src="assets/category.svg" alt="category image" />
-              </div>
-              <div class="category_content-wrapper">
-                <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-                <p class="t-tagline-50r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum.
-                </p>
-                <div class="category_content_cta-link">
-                  <small class="t-tagline-50r">Read more.</small>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
-            </div>
-            <!-- 2 -->
-            <div class="category_container">
-              <div class="flex items-center">
-                <button class="category_btn">category 2</button>
-                <svg
-                  width="60"
-                  height="20"
-                  viewBox="0 0 126 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
-                  <path
-                    d="M114.956 1.00014L123.941 9.98535L114.956 18.9706"
-                    stroke="black"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
-              <div class="category_image-wrapper">
-                <img src="assets/category.svg" alt="category image" />
-              </div>
-              <div class="category_content-wrapper">
-                <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-                <p class="t-tagline-50r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum.
-                </p>
-                <div class="category_content_cta-link">
-                  <small class="t-tagline-50r">Read more.</small>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
-            </div>
-            <!-- 3 -->
-            <div class="category_container">
-              <div class="flex items-center">
-                <button class="category_btn">category 3</button>
-                <svg
-                  width="60"
-                  height="20"
-                  viewBox="0 0 126 20"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
-                  <path
-                    d="M114.956 1.00014L123.941 9.98535L114.956 18.9706"
-                    stroke="black"
-                    stroke-width="2"
-                  />
-                </svg>
-              </div>
-              <div class="category_image-wrapper">
-                <img src="assets/category.svg" alt="category image" />
-              </div>
-              <div class="category_content-wrapper">
-                <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-                <p class="t-tagline-50r">
-                  Aenean molestie vestibulum ultrices. Donec nisi elit,
-                  tristique sit amet diam eget, cursus vulputate sem. In nec
-                  rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                  vulputate neque at elementum.
-                </p>
-                <div class="category_content_cta-link">
-                  <small class="t-tagline-50r">Read more.</small>
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 17 17"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </div>
-                <hr />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!--                                                About                                                            -->
-      <section class="about_section">
-        <div class="about_section-container">
-          <div class="about_section-area1">
-            <img
-              src="assets/about_1.svg"
-              alt="clock image"
-              class="about_section_img"
-            />
-            <div class="about_section-title flex items-end">
-              <h3 class="t-heading-500m">
-                Our
-                <br />
-                <div class="flex items-center">
-                  Mission.
-                  <svg
-                    width="240"
-                    height="20"
-                    viewBox="0 0 240 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M0 10.5146H123.5"
-                      stroke="black"
-                      stroke-width="2"
-                    />
-                    <path
-                      d="M114.956 1.00014L123.941 9.98535L114.956 18.9706"
-                      stroke="black"
-                      stroke-width="2"
-                    />
-                  </svg>
-                </div>
-              </h3>
-            </div>
-          </div>
-          <div class="about_section-area2">
-            <div class="about_content">
-              <h3 class="t-heading-400">Mission.</h3>
-              <p class="t-tagline-100m">
-                Aenean molestie vestibulum ultrices. Donec nisi elit, tristique
-                sit amet diam eget, cursus vulputate sem. In nec rutrum metus.
-                Vestibulum ac ante tellus. Maecenas congue vulputate neque at
-                elementum.
+            <div class="masthead-section_para-container">
+              <p class="t-tagline-100r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum....
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-      <!--                                                Newsletter                                                            -->
-      <section class="newsletter_section">
-        <div class="newsletter_section-container">
-          <div class="newsletter_section-area1">
-            <img src="assets/newsletter.svg" alt="newsletter image" />
-            <div class="bg"></div>
-          </div>
-          <div class="newsletter_section-area2">
-            <h3 class="t-heading-500m">
-              Subscribe <br />
-              to our Newsletter
-            </h3>
-            <div class="newsletter_input">
-              <input
-                class="newsletter_input_field"
-                placeholder="Your Email address"
-              />
-              <button class="newsletter_submit-btn">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 35 35"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M3.77148 2.30352C3.58839 2.21194 3.38327 2.17359 3.17946 2.19283C2.97565 2.21206 2.78133 2.28811 2.6186 2.41232C2.45587 2.53653 2.33127 2.70392 2.25896 2.89545C2.18666 3.08697 2.16956 3.29494 2.20961 3.49571L5.27867 14.1051C5.3359 14.3028 5.44775 14.4803 5.60138 14.6173C5.755 14.7543 5.94416 14.8452 6.14711 14.8795L18.594 16.9641C19.1802 17.0801 19.1802 17.9201 18.594 18.036L6.14711 20.1207C5.94416 20.155 5.755 20.2458 5.60138 20.3828C5.44775 20.5198 5.3359 20.6974 5.27867 20.8951L2.20961 31.5045C2.16956 31.7052 2.18666 31.9132 2.25896 32.1047C2.33127 32.2962 2.45587 32.4636 2.6186 32.5878C2.78133 32.7121 2.97565 32.7881 3.17946 32.8073C3.38327 32.8266 3.58839 32.7882 3.77148 32.6966L32.209 18.4779C32.3904 18.387 32.543 18.2473 32.6496 18.0747C32.7562 17.902 32.8127 17.703 32.8127 17.5001C32.8127 17.2971 32.7562 17.0982 32.6496 16.9255C32.543 16.7528 32.3904 16.6132 32.209 16.5223L3.77148 2.30352Z"
-                  />
+            <div class="masthead-section_cta-container">
+              <div class="masthead-section_cta-link">
+                <small class="t-tagline-100r">Read more.</small>
+                <svg width="15" height="15" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
                 </svg>
-              </button>
+              </div>
+              <hr />
             </div>
-            <p class="t-paragraph">
-              Nunc sed diam eu ante molestie
+            <div class="stories_container">
+              <div class="masthead-section_category-container">
+                <h2 class="t-heading-500m">
+                  Latest <br />
+                  Stories.
+                </h2>
+              </div>
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="story-card" style="background-image: url(/assets/storybg1.jpg)">
+                      <div class="story-desc">
+                        <p class="t-tagline-100m">
+                          Aenean molestie vestibulum ultrices. Donec nisi elit,
+                          tristique sit amet diam eget.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="story-card" style="background-image: url(/assets/storybg2.jpg)">
+                      <div class="story-desc">
+                        <p class="t-tagline-100m">
+                          Aenean molestie vestibulum ultrices. Donec nisi elit,
+                          tristique sit amet diam eget.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="story-card" style="background-image: url(/assets/storybg3.jpg)">
+                      <div class="story-desc">
+                        <p class="t-tagline-100m">
+                          Aenean molestie vestibulum ultrices. Donec nisi elit,
+                          tristique sit amet diam eget.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--                                                Navbar                                                            -->
+    <nav>
+      <div class="nav_main">
+        <div class="nav_section">
+          <div class="nav_item">
+            <img class="nav_item_logo" src="assets/logo2.svg" alt="stone age logo" />
+          </div>
+          <div class="nav_item nav_item_social">
+            <img src="assets/youtube.svg" alt="stone age youtube" />
+          </div>
+          <div class="nav_item nav_item_social">
+            <img src="assets/twitter.svg" alt="stone age twitter" />
+          </div>
+          <div class="nav_item nav_item_social">
+            <img src="assets/instagram.svg" alt="stone age instagram" />
+          </div>
+          <div class="nav_item nav_search_btn" onclick="handleSearchBarToggle()">
+            <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.1942 19.8067C21.6477 19.2833 21.1159 18.7448 20.5993 18.192C20.1653 17.751 19.904 17.4302 19.904 17.4302L16.6373 15.8703C17.9451 14.3871 18.6669 12.4776 18.6673 10.5002C18.6673 5.998 15.004 2.3335 10.5007 2.3335C5.99732 2.3335 2.33398 5.998 2.33398 10.5002C2.33398 15.0023 5.99732 18.6668 10.5007 18.6668C12.5575 18.6668 14.4323 17.8968 15.8708 16.638L17.4307 19.9047C17.4307 19.9047 17.7515 20.166 18.1925 20.6C18.644 21.0235 19.2378 21.5963 19.8072 22.1948L21.3915 23.8188L22.0962 24.5725L24.5707 22.098L23.817 21.3933C23.3748 20.9593 22.7845 20.383 22.1942 19.8067V19.8067ZM10.5007 16.3335C7.28415 16.3335 4.66732 13.7167 4.66732 10.5002C4.66732 7.28366 7.28415 4.66683 10.5007 4.66683C13.7172 4.66683 16.334 7.28366 16.334 10.5002C16.334 13.7167 13.7172 16.3335 10.5007 16.3335Z"
+                fill="#8E8E8E" />
+            </svg>
+          </div>
+        </div>
+        <div class="nav_section">
+          <div class="nav_item sub_nav_btn" onclick="handleSubNavToggle()">
+            <svg width="37" height="31" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="8" cy="8" r="8" />
+              <ellipse cx="28" cy="12.5" rx="9" ry="8.5" />
+              <circle cx="13.5" cy="25.5" r="5.5" />
+            </svg>
+          </div>
+        </div>
+        <div class="nav_section">
+          <div class="nav_item_category">
+            <a href="#" class="t-tagline-50r">category 1</a>
+          </div>
+          <div class="nav_item_category">
+            <a href="#" class="t-tagline-50r">category 2</a>
+          </div>
+          <div class="nav_item_category">
+            <a href="#" class="t-tagline-50r">category 3</a>
+          </div>
+          <div class="nav_item_category">
+            <a href="#" class="t-tagline-50r">category 4</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- subnav -->
+      <div class="sub_nav">
+        <div class="sub_nav_items">
+          <div class="sub_nav_item">
+            <a href="#" class="sub_nav_link">HOME</a>
+          </div>
+          <div class="sub_nav_item">
+            <a href="#" class="sub_nav_link">ABOUT</a>
+          </div>
+          <div class="sub_nav_item">
+            <a href="javascript:void(0)" onclick="handleThemeToggle()">
+              <img class="theme_toggle" src="assets/dark-icon.svg" alt="theme icon" />
+            </a>
+          </div>
+          <div class="sub_nav_item">
+            <a href="#" class="sub_nav_link">CONTACT</a>
+          </div>
+          <div class="sub_nav_item">
+            <a href="#" class="sub_nav_link">ADVERTISE</a>
+          </div>
+        </div>
+      </div>
+      <!-- search -->
+      <div class="search_bar">
+        <div class="search_bar-container">
+          <input type="search" class="nav_search_bar" />
+          <button class="nav_serach_bar-btn">search</button>
+        </div>
+      </div>
+    </nav>
+
+    <!--                                                Articles                                                            -->
+    <section class="articles_section">
+      <h2 class="t-heading-500m">
+        Published
+        <br />Articles.
+      </h2>
+      <div class="row articles_section-container">
+        <div class="col-8 articles_col">
+          <div class="article_container">
+            <div class="article_image-wrapper">
+              <img src="assets/articles.svg" alt="article image" />
+            </div>
+            <div class="article_content-wrapper">
+              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
+              <p class="t-tagline-50r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum.
+              </p>
+              <div class="article_content_cta-link">
+                <small class="t-tagline-50r">Read more.</small>
+                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="article_container">
+            <div class="article_image-wrapper">
+              <img src="assets/articles.svg" alt="article image" />
+            </div>
+            <div class="article_content-wrapper">
+              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
+              <p class="t-tagline-50r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum.
+              </p>
+              <div class="article_content_cta-link">
+                <small class="t-tagline-50r">Read more.</small>
+                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="article_container">
+            <div class="article_image-wrapper">
+              <img src="assets/articles.svg" alt="article image" />
+            </div>
+            <div class="article_content-wrapper">
+              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
+              <p class="t-tagline-50r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum.
+              </p>
+              <div class="article_content_cta-link">
+                <small class="t-tagline-50r">Read more.</small>
+                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="article_container">
+            <div class="article_image-wrapper">
+              <img src="assets/articles.svg" alt="article image" />
+            </div>
+            <div class="article_content-wrapper">
+              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
+              <p class="t-tagline-50r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum.
+              </p>
+              <div class="article_content_cta-link">
+                <small class="t-tagline-50r">Read more.</small>
+                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="article_container">
+            <div class="article_image-wrapper">
+              <img src="assets/articles.svg" alt="article image" />
+            </div>
+            <div class="article_content-wrapper">
+              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
+              <p class="t-tagline-50r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum.
+              </p>
+              <div class="article_content_cta-link">
+                <small class="t-tagline-50r">Read more.</small>
+                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <div class="pagination_container">
+            <div class="pagination_wrapper">
+              <div class="navigation-btn-p">
+                <svg width="160" height="20" viewBox="0 0 240 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
+                  <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
+                </svg>
+                <small class="t-tagline-50r">Previous</small>
+              </div>
+              <div class="pagenum_container">
+                <div class="pagenum_btn">1</div>
+                <div class="pagenum_btn active">2</div>
+                <div class="pagenum_btn">3</div>
+                <div class="pagenum_btn">4</div>
+                <div class="pagenum_btn">5</div>
+                <div class="pagenum_btn">6</div>
+                <div class="pagenum_btn">7</div>
+              </div>
+              <div class="navigation-btn-n">
+                <small class="t-tagline-50r">Next</small>
+                <svg width="160" height="20" viewBox="0 0 240 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
+                  <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Category -->
+        <div class="mob-category_lable">
+          <div class="flex items-center">
+            <button class="category_btn">More articles</button>
+            <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
+              <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
+            </svg>
+          </div>
+        </div>
+        <div class="col-4 categories_col">
+          <div class="category_container">
+            <div class="flex items-center">
+              <button class="category_btn">category 1</button>
+              <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
+                <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="category_image-wrapper">
+              <img src="assets/category.svg" alt="category image" />
+            </div>
+            <div class="category_content-wrapper">
+              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
+              <p class="t-tagline-50r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum.
+              </p>
+              <div class="category_content_cta-link">
+                <small class="t-tagline-50r">Read more.</small>
+                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="category_container">
+            <div class="flex items-center">
+              <button class="category_btn">category 2</button>
+              <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
+                <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="category_image-wrapper">
+              <img src="assets/category.svg" alt="category image" />
+            </div>
+            <div class="category_content-wrapper">
+              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
+              <p class="t-tagline-50r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum.
+              </p>
+              <div class="category_content_cta-link">
+                <small class="t-tagline-50r">Read more.</small>
+                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <hr />
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="category_container">
+            <div class="flex items-center">
+              <button class="category_btn">category 3</button>
+              <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
+                <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="category_image-wrapper">
+              <img src="assets/category.svg" alt="category image" />
+            </div>
+            <div class="category_content-wrapper">
+              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
+              <p class="t-tagline-50r">
+                Aenean molestie vestibulum ultrices. Donec nisi elit,
+                tristique sit amet diam eget, cursus vulputate sem. In nec
+                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                vulputate neque at elementum.
+              </p>
+              <div class="category_content_cta-link">
+                <small class="t-tagline-50r">Read more.</small>
+                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--                                                About                                                            -->
+    <section class="about_section">
+      <div class="about_section-container">
+        <div class="about_section-area1">
+          <img src="assets/about_1.svg" alt="clock image" class="about_section_img" />
+          <div class="about_section-title flex items-end">
+            <h3 class="t-heading-500m">
+              Our
               <br />
-              faucibus commodo non mauris.
+              <div class="flex items-center">
+                Mission.
+                <svg width="240" height="20" viewBox="0 0 240 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
+                  <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
+                </svg>
+              </div>
+            </h3>
+          </div>
+        </div>
+        <div class="about_section-area2">
+          <div class="about_content">
+            <h3 class="t-heading-400">Mission.</h3>
+            <p class="t-tagline-100m">
+              Aenean molestie vestibulum ultrices. Donec nisi elit, tristique
+              sit amet diam eget, cursus vulputate sem. In nec rutrum metus.
+              Vestibulum ac ante tellus. Maecenas congue vulputate neque at
+              elementum.
             </p>
           </div>
         </div>
-      </section>
-      <!--                                                footer                                                            -->
-      <footer>
-        <div class="footer_container">
-          <div class="footer_col-1">
-            <img
-              class="footer_logo"
-              src="assets/logo-big_light.svg"
-              alt="logo big"
-            />
-            <p>
-              Aenean molestie vestibulum ultrices. <br />Donec nisi elit,
-              tristique sit amet
-            </p>
+      </div>
+    </section>
+    <!--                                                Newsletter                                                            -->
+    <section class="newsletter_section">
+      <div class="newsletter_section-container">
+        <div class="newsletter_section-area1">
+          <img src="assets/newsletter.svg" alt="newsletter image" />
+          <div class="bg"></div>
+        </div>
+        <div class="newsletter_section-area2">
+          <h3 class="t-heading-500m">
+            Subscribe <br />
+            to our Newsletter
+          </h3>
+          <div class="newsletter_input">
+            <input class="newsletter_input_field" placeholder="Your Email address" />
+            <button class="newsletter_submit-btn">
+              <svg width="20" height="20" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.77148 2.30352C3.58839 2.21194 3.38327 2.17359 3.17946 2.19283C2.97565 2.21206 2.78133 2.28811 2.6186 2.41232C2.45587 2.53653 2.33127 2.70392 2.25896 2.89545C2.18666 3.08697 2.16956 3.29494 2.20961 3.49571L5.27867 14.1051C5.3359 14.3028 5.44775 14.4803 5.60138 14.6173C5.755 14.7543 5.94416 14.8452 6.14711 14.8795L18.594 16.9641C19.1802 17.0801 19.1802 17.9201 18.594 18.036L6.14711 20.1207C5.94416 20.155 5.755 20.2458 5.60138 20.3828C5.44775 20.5198 5.3359 20.6974 5.27867 20.8951L2.20961 31.5045C2.16956 31.7052 2.18666 31.9132 2.25896 32.1047C2.33127 32.2962 2.45587 32.4636 2.6186 32.5878C2.78133 32.7121 2.97565 32.7881 3.17946 32.8073C3.38327 32.8266 3.58839 32.7882 3.77148 32.6966L32.209 18.4779C32.3904 18.387 32.543 18.2473 32.6496 18.0747C32.7562 17.902 32.8127 17.703 32.8127 17.5001C32.8127 17.2971 32.7562 17.0982 32.6496 16.9255C32.543 16.7528 32.3904 16.6132 32.209 16.5223L3.77148 2.30352Z" />
+              </svg>
+            </button>
           </div>
-          <div class="footer_col-2">
-            <div class="footer_links-container">
-              <div class="footer_links">
-                <a href="#" class="footer_link">About</a>
-                <a href="#" class="footer_link">Mail</a>
-                <a href="#" class="footer_link">Contact</a>
-                <a href="#" class="footer_link">Comments</a>
-                <a href="#" class="footer_link">Address</a>
-                <a href="#" class="footer_link">Comments</a>
-              </div>
-              <div class="footer_social-links">
-                <a href="#" class="footer_link">
-                  <img src="assets/youtube-dark.svg" alt="stone age youtube" />
-                </a>
-                <a href="#" class="footer_link">
-                  <img src="assets/twitter-dark.svg" alt="stone age youtube" />
-                </a>
-                <a href="#" class="footer_link">
-                  <img
-                    src="assets/instagram-dark.svg"
-                    alt="stone age youtube"
-                  />
-                </a>
-                <a href="#" class="footer_link">
-                  <img src="assets/facebook-dark.svg" alt="stone age youtube" />
-                </a>
-              </div>
+          <p class="t-paragraph">
+            Nunc sed diam eu ante molestie
+            <br />
+            faucibus commodo non mauris.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!--                                                footer                                                            -->
+    <footer>
+      <div class="footer_container">
+        <div class="footer_col-1">
+          <img class="footer_logo" src="assets/logo-big_light.svg" alt="logo big" />
+          <p>
+            Aenean molestie vestibulum ultrices. <br />Donec nisi elit,
+            tristique sit amet
+          </p>
+        </div>
+        <div class="footer_col-2">
+          <div class="footer_links-container">
+            <div class="footer_links">
+              <a href="#" class="footer_link">About</a>
+              <a href="#" class="footer_link">Mail</a>
+              <a href="#" class="footer_link">Contact</a>
+              <a href="#" class="footer_link">Comments</a>
+              <a href="#" class="footer_link">Address</a>
+              <a href="#" class="footer_link">Comments</a>
+            </div>
+            <div class="footer_social-links">
+              <a href="#" class="footer_link">
+                <img src="assets/youtube-dark.svg" alt="stone age youtube" />
+              </a>
+              <a href="#" class="footer_link">
+                <img src="assets/twitter-dark.svg" alt="stone age youtube" />
+              </a>
+              <a href="#" class="footer_link">
+                <img src="assets/instagram-dark.svg" alt="stone age youtube" />
+              </a>
+              <a href="#" class="footer_link">
+                <img src="assets/facebook-dark.svg" alt="stone age youtube" />
+              </a>
             </div>
           </div>
         </div>
-      </footer>
-    </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script src="scripts/index.js"></script>
-  </body>
+      </div>
+    </footer>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="scripts/index.js"></script>
+</body>
+
 </html>
