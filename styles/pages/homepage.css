@@ -347,6 +347,9 @@ body.dark .newsletter_submit-btn svg path {
         margin-bottom: var(--r48); 
         margin-right: auto;
     }  
+    .articles_section {
+        padding-top: var(--r100);       
+    }
     .articles_col{
         width: 100%;
     }    
