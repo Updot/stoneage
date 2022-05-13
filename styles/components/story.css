@@ -25,8 +25,7 @@ position: relative;
     height: 100%;    
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: blur(8px);
-    -webkit-filter: blur(8px); */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,10 +37,30 @@ position: relative;
     pointer-events: none;
     
 }
+.story_date-container{
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  padding-bottom: var(--r48);
+}
+.story_date-container hr{
+  border-bottom: solid var(--bg100) 2px; 
+}
+.story_cta-link{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.story_cta-link > svg path{
+  stroke: var(--accent);
+}
+body.dark .story_cta-link > svg path{
+  stroke: var(--accent);
+}
 @media screen and (max-width: 480px){
   .stories_container{
     flex-direction: column;
-    
+
   }
   .swiper {
       width:100%;
