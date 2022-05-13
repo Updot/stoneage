@@ -57,9 +57,10 @@
     display: flex;
     justify-content: space-between; 
 }
-.masthead-section_cta-link svg path, .article_content_cta-link svg path, .category_content_cta-link svg path{
-    stroke: var(--accent);
+.masthead-section_cta-link svg path{
+    stroke: var(--bg200);
 }
+
 .masthead-section_category-container{
     background-color: var(--accent);
     width: 180px;
@@ -195,7 +196,14 @@ body.dark .pagenum_btn:hover {
 .mob-category_lable{
     display: none;
 }
-
+.article_content_cta-link > svg path,
+.category_content_cta-link > svg path {
+    stroke: var(--accent);
+}
+body.dark .article_content_cta-link>svg path,
+body.dark .category_content_cta-link>svg path {
+    stroke: var(--accent);
+}
 /* About */
 .about_section{
     padding-top: var(--r72);
