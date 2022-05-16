@@ -45,6 +45,31 @@ body.dark .nav_section-btn{
 .nav_item.active svg ellipse {
   fill: var(--accent);
 }
+.nav_item_category {
+  height: 100%;
+  padding: 0 var(--r16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav_item_category:hover{
+  background-color: var(--bg300);
+  color: var(--text100);
+}
+
+body.dark .nav_item_category:hover{
+  background-color: var(--bg100);
+  color: var(--text200);
+}
+
+.nav_item_category.active{
+  background-color: var(--bg300);
+  color: var(--text100);  
+}
+body.dark .nav_item_category.active {
+  background-color: var(--bg100);
+  color: var(--text200);
+}
 .nav_item_logo {
   width: auto;
   height: 60px;

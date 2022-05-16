@@ -1,0 +1,14 @@
+.overlay-container {
+    background-color: var(--accent);
+    width: 140px;
+    height: 140px;
+    display: flex;
+    margin-right: auto;
+    align-items: flex-start;  
+    margin-bottom: var(--r30);
+}
+
+.overlay-container p {
+    margin-top: var(--r16);    
+    margin-left: var(--r16);
+}

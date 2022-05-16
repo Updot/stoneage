@@ -6,11 +6,13 @@
     --bg100: #fff;
     --bg150: #E7E7E7;
     --bg200: #111111;
+    --bg250: #C7C7C7;
     --bg300: #000;
+    --bg350: #636363;
     --bg400: #202020;
     --text100: #fff;
     --text200: #000;
-    --bg250: #C7C7C7;
+    
     --default-font: "Poppins", sans-serif;
     --screen: 1440;
     --container-padding: 33px;
@@ -172,6 +174,12 @@ select {
     font-family: var(--default-font);
     font-size: clamp(24px, calc((40 / (var(--screen) / 100)) * 1vw), 54px);
     font-weight: 400;
+    line-height: 1.2;
+}
+.t-heading-400m {
+    font-family: var(--default-font);
+    font-size: clamp(24px, calc((40 / (var(--screen) / 100)) * 1vw), 54px);
+    font-weight: 600;
     line-height: 1.2;
 }
 .t-heading-400 {
