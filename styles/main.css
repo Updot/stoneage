@@ -357,15 +357,15 @@ select {
 }
 
 .page__container {
+    padding-left: var(--r-container);
+    padding-right: var(--r-container);
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    padding-left: var(--r-container);
-    padding-right: var(--r-container);
-    /* max-width: calc(1610px + var(--r-container) * 2); */
+
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) {   
     .page__container{
         padding-left: var(--r-mob-container);
         padding-right: var(--r-mob-container);

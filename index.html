@@ -18,24 +18,23 @@
 </head>
 
 <body>
-  <main class="page__container">
+  <main style="overflow: hidden;">
     <!--                                                Header                                                            -->
-    <header class="header_main">
+    <header class="header_main page__container">
       <div class="header_container flex items-center">
         <img class="header_logo" src="assets/logo.svg" alt="stone age logo" width="80" height="auto" />
       </div>
     </header>
 
     <!--                                                Masthead                                                            -->
-    <section class="mast-section_container">
+    <section class="mast-section_container page__container">
       <div class="mast-section_wrapper">
-        <div class="mast-section_image-container" style="background-image: url(assets/masthead.svg);">
-          <!-- <img src="assets/masthead.svg" alt="masthead image" class="masthead-image" /> -->
-          <!-- <img src="assets/masthead-vector.svg" alt="masthead image vector" class="masthead-image-vector" /> -->
+        <div class="mast-section_image-container">
+          <img src="assets/masthead.svg" alt="masthead image" class="masthead-image" />
         </div>
         <div class="masthead-section_content-container">
           <div class="masthead-section_content-wrapper">
-            <h1 class="t-heading-500m">
+            <h1 class="t-heading-400">
               Lorem ipsum
               <br />
               dolor sit amet.
@@ -48,8 +47,7 @@
               <p class="t-tagline-100r">
                 Aenean molestie vestibulum ultrices. Donec nisi elit,
                 tristique sit amet diam eget, cursus vulputate sem. In nec
-                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                vulputate neque at elementum....
+                rutrum metus.....
               </p>
             </div>
             <div class="masthead-section_cta-container">
@@ -64,66 +62,26 @@
             </div>
             <div class="stories_container">
               <div class="masthead-section_category-container">
-                <h2 class="t-heading-500m">
+                <h2 class="t-heading-400">
                   Latest <br />
                   Stories.
                 </h2>
               </div>
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="story-card"
-                      style="background-image: url(https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60)">
-                      <div class="story-desc">
-                        <p class="t-tagline-100m">
-                          Aenean molestie vestibulum ultrices. Donec nisi elit,
-                          tristique sit amet diam eget.
-                        </p>
-                        <div class="story_date-container">
-                          <hr />
-                          <p class="t-tagline-100m">01 | 01 | 22</p>
-                        </div>
-                      </div>
-                      <div class="story_cta-link">
-                        <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="story-card"
-                      style="background-image: url(https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGVjaHxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60)">
-                      <div class="story-desc">
-                        <p class="t-tagline-100m">
-                          Aenean molestie vestibulum ultrices. Donec nisi elit,
-                          tristique sit amet diam eget.
-                        </p>
-                        <div class="story_date-container">
-                          <hr />
-                          <p class="t-tagline-100m">01 | 01 | 22</p>
-                        </div>
-                      </div>
-                      <div class="story_cta-link">
-                        <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="story-card"
-                      style="background-image: url(https://images.unsplash.com/photo-1568613444605-b8b0de479bed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG5ld3NwYXBlcnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60)">
-                      <div class="story-desc">
-                        <p class="t-tagline-100m">
-                          Aenean molestie vestibulum ultrices. Donec nisi elit,
-                          tristique sit amet diam eget.
-                        </p>
-                        <div class="story_date-container">
-                          <hr />
-                          <p class="t-tagline-100m">01 | 01 | 22</p>
+              <div class="stories_slider_container">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="story-card"
+                        style="background-image: url(https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60)">
+                        <div class="story-desc">
+                          <p class="t-tagline-100m">
+                            Aenean molestie vestibulum ultrices. Donec nisi elit,
+                            tristique sit amet diam eget.
+                          </p>
+                          <div class="story_date-container">
+                            <hr />
+                            <p class="t-tagline-100m">01 | 01 | 22</p>
+                          </div>
                         </div>
                         <div class="story_cta-link">
                           <svg width="12" height="12" viewBox="0 0 17 17" fill="none"
@@ -134,6 +92,58 @@
                         </div>
                       </div>
                     </div>
+                    <div class="swiper-slide">
+                      <div class="story-card"
+                        style="background-image: url(https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGVjaHxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60)">
+                        <div class="story-desc">
+                          <p class="t-tagline-100m">
+                            Aenean molestie vestibulum ultrices. Donec nisi elit,
+                            tristique sit amet diam eget.
+                          </p>
+                          <div class="story_date-container">
+                            <hr />
+                            <p class="t-tagline-100m">01 | 01 | 22</p>
+                          </div>
+                        </div>
+                        <div class="story_cta-link">
+                          <svg width="12" height="12" viewBox="0 0 17 17" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2"
+                              stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="story-card"
+                        style="background-image: url(https://images.unsplash.com/photo-1568613444605-b8b0de479bed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG5ld3NwYXBlcnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60)">
+                        <div class="story-desc">
+                          <p class="t-tagline-100m">
+                            Aenean molestie vestibulum ultrices. Donec nisi elit,
+                            tristique sit amet diam eget.
+                          </p>
+                          <div class="story_date-container">
+                            <hr />
+                            <p class="t-tagline-100m">01 | 01 | 22</p>
+                          </div>
+                          <div class="story_cta-link">
+                            <svg width="12" height="12" viewBox="0 0 17 17" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="slider_nav-container">
+                  <div class="slider_nav_prev-btn">
+                    <img src="assets/controller.svg" alt="nav prev">
+                  </div>
+                  <div class="slider_nav_next-btn">
+                    <img src="assets/controller.svg" alt="nav prev">
                   </div>
                 </div>
               </div>
@@ -167,7 +177,7 @@
             </svg>
           </div>
         </div>
-        <div class="nav_section">
+        <div class="nav_section-btn">
           <div class="nav_item sub_nav_btn" onclick="handleSubNavToggle()">
             <svg width="37" height="31" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="8" cy="8" r="8" />
@@ -224,7 +234,7 @@
     </nav>
 
     <!--                                                Articles                                                            -->
-    <section class="articles_section">
+    <section class="articles_section page__container">
       <h2 class="t-heading-500m">
         Published
         <br />Articles.
@@ -348,7 +358,7 @@
           <div class="pagination_container">
             <div class="pagination_wrapper">
               <div class="navigation-btn-p">
-                <svg width="160" height="20" viewBox="0 0 240 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 160 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
                   <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
                 </svg>
@@ -360,12 +370,10 @@
                 <div class="pagenum_btn">3</div>
                 <div class="pagenum_btn">4</div>
                 <div class="pagenum_btn">5</div>
-                <div class="pagenum_btn">6</div>
-                <div class="pagenum_btn">7</div>
               </div>
               <div class="navigation-btn-n">
                 <small class="t-tagline-50r">Next</small>
-                <svg width="160" height="20" viewBox="0 0 240 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 160 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
                   <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
                 </svg>
@@ -444,7 +452,7 @@
             </div>
           </div>
           <!-- 3 -->
-          <div class="category_container">
+          <!-- <div class="category_container">
             <div class="flex items-center">
               <button class="category_btn">category 3</button>
               <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -472,12 +480,12 @@
               </div>
               <hr />
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
     <!--                                                About                                                            -->
-    <section class="about_section">
+    <section class="about_section ">
       <div class="about_section-container">
         <div class="about_section-area1">
           <img src="assets/about_1.svg" alt="clock image" class="about_section_img" />
@@ -485,9 +493,9 @@
             <h3 class="t-heading-500m">
               Our
               <br />
-              <div class="flex items-center">
+              <div class="about_bottom flex items-center">
                 Mission.
-                <svg width="240" height="20" viewBox="0 0 240 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 240 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
                   <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
                 </svg>
@@ -509,7 +517,7 @@
       </div>
     </section>
     <!--                                                Newsletter                                                            -->
-    <section class="newsletter_section">
+    <section class="newsletter_section page__container">
       <div class="newsletter_section-container">
         <div class="newsletter_section-area1">
           <img src="assets/newsletter.svg" alt="newsletter image" />
