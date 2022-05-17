@@ -1,81 +1,101 @@
-/* Masthead */
-.mast-section_container{
-    width: 100%;
+/* Banner */
+.banner-section{
     height: 100vh;
-    z-index: 10;   
+    width: 100%;
 }
-.mast-section_wrapper{
+.banner-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.banner-image-area{
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 }
-.mast-section_image-container{   
-    overflow: hidden;
+.banner-image{
+    height: 100%;
     width: 100%;
-    height: auto;  
+    object-fit: cover;
 }
-.masthead-image{
-    width: 100%;
-    z-index: 10;
-}
-.masthead-section_content-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: auto;
-    height: auto;  
-    position: relative;  
-}
-.masthead-section_content-wrapper{
+.banner-vector{
     position: absolute;
-    top: -48px;
-    z-index: 100;
-}
-.masthead-section_content-container h1{
-    margin-bottom: var(--r30);
-    max-width: 100%;
-    text-align: start;  
-}
-.masthead-section_date-container{
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    z-index: -2;
 }
-.masthead-section_date-container hr, .masthead-section_cta-container hr, .article-content hr{
-    border-bottom: solid var(--bg200) 1px; 
-}
-.masthead-section_para-container p{
-    width: 100%;
-    max-width: 600px;
-    padding-top: var(--r16);
-    padding-bottom: var(--r16);
-}
-.masthead-section_cta-link, .article_content_cta-link, .category_content_cta-link{
-    display: flex;
-    justify-content: space-between; 
-}
-.masthead-section_cta-link svg path{
-    stroke: var(--bg200);
-}
-
-.masthead-section_category-container{
+.overlay-container {
+    position: absolute;
+    top: 50%;
+    left: 60%;    
     background-color: var(--accent);
     width: 140px;
-    height: 140px; 
+    height: 140px;
     display: flex;
     margin-right: auto;
-    align-items: center;
-    position: absolute;
-    top: 40px;
-    left: -20%;
-}
-.masthead-section_category-container h2 {
-    margin-left: var(--r72);
+    align-items: flex-start;
+    margin-bottom: var(--r30);
 }
 
+.overlay-container p {
+    margin-top: var(--r16);
+    margin-left: var(--r64);
+}
+
+@media (max-width: 480px) {
+
+    .overlay-container p {
+        margin-top: var(--r64);
+        margin-left: 80px;
+    }
+}
+.banner-content-area{
+    width: 100%;
+    height: 100%;
+}
+.banner-content-container{   
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+}
+.banner-article-section{
+    margin-top: var(--r16);
+}
+.banner-date-section{
+    font-size: 12px;
+    width: 100%;
+}
+.banner-date-section, .banner-read-more {
+    border-bottom: thin solid var(--bg300);
+}
+body.dark .banner-date-section, body.dark .banner-read-more{
+    border-bottom: thin solid var(--bg100);
+}
+.banner-read-more{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--r48);
+}
 /* Articles */
 .articles_section{
-    /* padding: var(--r48) 0px; */   
+    padding-top: var(--r64);
+}
+.article-content hr {
+    border-bottom: solid var(--bg200) 1px;
+}
+
+.article_content_cta-link,
+.category_content_cta-link {
+    display: flex;
+    justify-content: space-between;
 }
 .articles_section h2{
     padding: var(--r48) 0px;
@@ -338,42 +358,7 @@ body.dark .newsletter_submit-btn{
 body.dark .newsletter_submit-btn svg path {
     fill: var(--bg200);
 }
-@media (max-width: 768px) {
-    .mast-section_container {
-        width: 100%;
-        height: 100%;
-        z-index: 10;
-        /* overflow-x: hidden; */
-    }
-    .mast-section_wrapper{
-        grid-template-columns: 1fr;
-    }    
-    .masthead-section_content-wrapper{
-        position: unset;
-
-    }
-    .mast-section_image-container {
-        width: 100%;
-        height: 30vh;
-        border-bottom: solid var(--bg200) 1px;
-    }
-    body.dark .mast-section_image-container  {        
-        border-bottom: solid var(--bg100) 1px;
-    }  
-    .masthead-section_content-container h1 {
-        margin: var(--r16) 0px;      
-    }
-    .masthead-section_category-container { 
-        position: unset;     
-        background-color: var(--accent);
-        width: 100px;
-        height: 100px;
-        display: flex;
-        align-items: center;   
-        margin-top: var(--r30);
-        margin-bottom: var(--r48); 
-        margin-right: auto;
-    }  
+@media (max-width: 768px) {     
     .articles_section {
         padding-top: var(--r100);       
     }

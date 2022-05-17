@@ -10,6 +10,7 @@
     --bg300: #000;
     --bg350: #636363;
     --bg400: #202020;
+    --bg450: #3f3f3f;
     --text100: #fff;
     --text200: #000;
     
@@ -142,7 +143,9 @@ button,
 select {
     text-transform: none;
 }
-
+p{
+    margin-bottom: 0;
+}
 .button_icon {
     font-family: var(--default-font);
     font-size: clamp(16px, calc((24 / (var(--screen) / 100)) * 1vw), 32px);
@@ -369,8 +372,7 @@ select {
     padding-right: var(--r-container);
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-
+    width: 100%;  
 }
 
 @media (max-width: 768px) {   

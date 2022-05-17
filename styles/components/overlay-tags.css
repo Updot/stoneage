@@ -12,3 +12,11 @@
     margin-top: var(--r16);    
     margin-left: var(--r16);
 }
+@media (max-width: 480px) {
+
+    .overlay-container p {
+        margin-top: var(--r64);
+        margin-left: 80px;
+    }
+}
+    
