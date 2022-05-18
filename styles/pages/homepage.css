@@ -266,7 +266,6 @@ body.dark .category_content_cta-link>svg path {
     stroke-width: 1px;
 }
 .about_section-area2{
-    background-color: var(--bg400);
     width: calc(100% * 0.42);
     height: 500px;
     display: flex;
@@ -275,6 +274,9 @@ body.dark .category_content_cta-link>svg path {
     justify-content: center;
     position: absolute;
     right: -100px;
+}
+.about_section-area2{
+    background-color: var(--bg400);    
 }
 body.dark .about_section-area2{
     background-color: var(--bg300);
@@ -446,6 +448,7 @@ body.dark .newsletter_submit-btn svg path {
     .about_section-container {
         flex-direction: column;
         padding-top: var(--r64);
+        padding-right: var(--r-container);
     }
     .about_section-area1 {
         background-color: var(--accent);
@@ -462,16 +465,13 @@ body.dark .newsletter_submit-btn svg path {
         width: 200px;
     }
     .about_section-area2{
-        background-color: var(--bg400);
         width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        position: unset;  
-        padding-left: var(--r-mob-container);
-        padding-right: var(--r-mob-container);
+        position: unset;          
     }
     .about_content {
         padding: var(--r64) var(--r48);
