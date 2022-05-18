@@ -44,7 +44,9 @@
     margin-top: var(--r16);
     margin-left: var(--r64);
 }
-
+.mob-overlay-container{
+    display: none;
+}
 .banner-content-area{
     width: 100%;
     height: 100%;
