@@ -492,6 +492,6 @@ body.dark .newsletter_submit-btn svg path {
         width: 80%;
     }
     .newsletter_submit-btn{
-            padding: calc(var(--r16) * 0.739) calc(var(--r16)* 1.5);
+            padding: calc(var(--r16) * 0.749) calc(var(--r16)* 1.5);
     }
 }

@@ -76,9 +76,17 @@ body.dark .nav_item_category.active {
 }
 .nav_search_btn {
   margin-left: var(--r64);
+  
+}
+.nav_search_btn > svg > path {
+    stroke: none;
+}
+body.dark .nav_search_btn>svg>path {
+  stroke: none;
 }
 .nav_search_btn.active > svg path {
     fill: var(--accent);
+    stroke: none;
 }
 .search_bar-container>input {
   width: 60%;
