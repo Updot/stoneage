@@ -296,7 +296,7 @@ body.dark .other_article-see-more {
         height: 100%;
         background-color: var(--bg400);
         margin-top: var(--r100);
-        overflow: hidden;
+
     }
     .article-column{
         width: 100%;
