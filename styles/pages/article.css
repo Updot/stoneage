@@ -290,12 +290,13 @@ body.dark .other_article-see-more {
     border-bottom: thin solid var(--bg100);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { 
     .banner-section {
         width: 100%;
         height: 100%;
         background-color: var(--bg400);
         margin-top: var(--r100);
+        overflow: hidden;
     }
     .article-column{
         width: 100%;
