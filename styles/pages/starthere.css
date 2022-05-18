@@ -1,0 +1,107 @@
+.banner-section {
+    width: 100%;
+    height: 100vh;
+    margin-top: var(--r48);
+
+}
+
+.banner-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-section {
+    border-bottom: thin var(--bg300) solid;
+}
+
+body.dark .banner-section {
+    border-bottom: thin var(--bg100) solid;
+}
+
+.banner-image-wrapper {
+    width: 500px;
+    height: auto;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.overlay-container {
+    background-color: var(--accent);
+    width: 140px;
+    height: 140px;
+    display: flex;
+    /* margin-right: auto; */
+    align-items: flex-start;
+    margin-bottom: var(--r30);
+}
+
+.overlay-container p {
+    margin-top: var(--r48);
+    margin-left: var(--r64);
+    white-space: nowrap;
+}
+.banner-content-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 3rem;
+}
+.mob-banner-desc{
+    display: none;
+}
+.starthere-container{
+    margin-top: var(--r30);
+}
+.starthere-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 3rem;
+    padding-bottom: var(--r48);
+}
+
+
+@media (max-width: 768px) {
+    .banner-section{
+        height: 100%;
+    } 
+    .banner-container{
+        flex-wrap: nowrap;
+    }
+    .banner-image-wrapper{
+        width: 200px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .banner-desc{
+        display: none;
+    }
+    .overlay-container {
+        width: 100px;
+        height: 100px;        
+    }
+    .overlay-container p {
+        margin-top: var(--r48);
+        margin-left: 40px;
+    }
+    .mob-banner-desc{
+        display: block;
+        margin-top: var(--r30);
+        margin-bottom: var(--r30);
+    }
+    .mob-banner-desc p{
+        line-height: 25px;
+    }
+    .starthere-wrapper{
+        border-bottom: thin var(--bg300) solid;
+    }
+
+    body.dark .starthere-wrapper {
+        border-bottom: thin var(--bg100) solid;
+    }
+}
