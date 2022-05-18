@@ -172,6 +172,7 @@ body.dark .author_article-see-more {
         height: 100%;
         width: 100%;
         align-items: center;
+        margin-top: var(--r48);
     }
     .banner-image-wrapper{
         width: 80%;
