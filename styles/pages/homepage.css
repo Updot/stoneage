@@ -349,7 +349,7 @@ body.dark .newsletter_input input{
     border: thin solid var(--bg100);   
 }
 .newsletter_submit-btn{
-    padding: calc(var(--r16) * 0.739) calc(var(--r16)* 1.5);
+    padding: calc(var(--r16) * 0.737) calc(var(--r16)* 1.5);
 }
 .newsletter_submit-btn {
     background-color: var(--bg200);    
