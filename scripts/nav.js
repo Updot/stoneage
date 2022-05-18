@@ -30,10 +30,13 @@ const handleThemeToggle = () => {
 
 const handleLogoChange = () => {
   body.classList.value === "dark"
-    ? ((footer_logo.src = "./assets/logo-big_dark.svg"),
-      (header_logo.src = "./assets/logo_dark.svg"))
-    : ((footer_logo.src = "./assets/logo-big_light.svg"),
-      (header_logo.src = "./assets/logo.svg"));
+    ? (footer_logo.src = "./assets/logo-big_dark.svg")
+    : (footer_logo.src = "./assets/logo-big_light.svg");
+
+  window.location.pathname === "/" &&
+    (body.classList.value === "dark"
+      ? (header_logo.src = "./assets/logo_dark.svg")
+      : (header_logo.src = "./assets/logo.svg"));
 };
 
 const handleThemeIconChange = () => {

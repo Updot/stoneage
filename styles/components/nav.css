@@ -156,6 +156,9 @@ body.dark .nav_serach_bar-btn {
     } */
 }
 @media screen and (max-width:480px){
+  .search_bar-container{
+    margin-top: 0;
+  }
   .search_bar-container>input {
     width: 200px;
     padding: calc(var(--r16)) 0;
