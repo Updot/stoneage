@@ -66,6 +66,7 @@
 }
 .banner-article-section{
     margin-top: var(--r16);
+    margin-right: var(--r48);
 }
 .banner-date-section{
     font-size: 12px;
@@ -82,7 +83,13 @@ body.dark .banner-date-section, body.dark .banner-read-more{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: var(--r48);
+    margin-top: var(--r48);  
+}
+.banner-read-more > svg > path {
+    stroke: var(--bg300);
+}
+body.dark .banner-read-more>svg>path {
+    stroke: var(--bg100);
 }
 /* Articles */
 .articles_section{
