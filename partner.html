@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner With Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components/nav.css" />
+    <link rel="stylesheet" href="styles/components/footer.css" />
+    <link rel="stylesheet" href="styles/pages/partner.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_main">
+            <div class="nav_section">
+                <a href="/" class="nav_item">
+                    <img class="nav_item_logo" src="assets/logo2.svg" alt="stone age logo" />
+                </a>
+                <div class="nav_item nav_item_social">
+                    <img src="assets/youtube.svg" alt="stone age youtube" />
+                </div>
+                <div class="nav_item nav_item_social">
+                    <img src="assets/twitter.svg" alt="stone age twitter" />
+                </div>
+                <div class="nav_item nav_item_social">
+                    <img src="assets/instagram.svg" alt="stone age instagram" />
+                </div>
+                <div class="nav_item nav_search_btn" onclick="handleSearchBarToggle()">
+                    <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.1942 19.8067C21.6477 19.2833 21.1159 18.7448 20.5993 18.192C20.1653 17.751 19.904 17.4302 19.904 17.4302L16.6373 15.8703C17.9451 14.3871 18.6669 12.4776 18.6673 10.5002C18.6673 5.998 15.004 2.3335 10.5007 2.3335C5.99732 2.3335 2.33398 5.998 2.33398 10.5002C2.33398 15.0023 5.99732 18.6668 10.5007 18.6668C12.5575 18.6668 14.4323 17.8968 15.8708 16.638L17.4307 19.9047C17.4307 19.9047 17.7515 20.166 18.1925 20.6C18.644 21.0235 19.2378 21.5963 19.8072 22.1948L21.3915 23.8188L22.0962 24.5725L24.5707 22.098L23.817 21.3933C23.3748 20.9593 22.7845 20.383 22.1942 19.8067V19.8067ZM10.5007 16.3335C7.28415 16.3335 4.66732 13.7167 4.66732 10.5002C4.66732 7.28366 7.28415 4.66683 10.5007 4.66683C13.7172 4.66683 16.334 7.28366 16.334 10.5002C16.334 13.7167 13.7172 16.3335 10.5007 16.3335Z"
+                            fill="#8E8E8E" />
+                    </svg>
+                </div>
+            </div>
+            <div class="nav_section-btn">
+                <div class="nav_item sub_nav_btn" onclick="handleSubNavToggle()">
+                    <svg width="37" height="31" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="8" />
+                        <ellipse cx="28" cy="12.5" rx="9" ry="8.5" />
+                        <circle cx="13.5" cy="25.5" r="5.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="nav_section">
+                <div class="nav_item_category">
+                    <a href="#" class="t-tagline-50r">category 1</a>
+                </div>
+                <div class="nav_item_category active">
+                    <a href="#" class="t-tagline-50r">category 2</a>
+                </div>
+                <div class="nav_item_category">
+                    <a href="#" class="t-tagline-50r">category 3</a>
+                </div>
+                <div class="nav_item_category">
+                    <a href="#" class="t-tagline-50r">category 4</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- subnav -->
+        <div class="sub_nav">
+            <div class="sub_nav_items">
+                <div class="sub_nav_item">
+                    <a href="#" class="sub_nav_link">HOME</a>
+                </div>
+                <div class="sub_nav_item">
+                    <a href="#" class="sub_nav_link">ABOUT</a>
+                </div>
+                <div class="sub_nav_item">
+                    <a href="javascript:void(0)" onclick="handleThemeToggle()">
+                        <img class="theme_toggle" src="assets/dark-icon.svg" alt="theme icon" />
+                    </a>
+                </div>
+                <div class="sub_nav_item">
+                    <a href="#" class="sub_nav_link">CONTACT</a>
+                </div>
+                <div class="sub_nav_item">
+                    <a href="starthere.html" class="sub_nav_link">ADVERTISE</a>
+                </div>
+            </div>
+        </div>
+        <!-- search -->
+        <div class="search_bar">
+            <div class="search_bar-container">
+                <input type="search" class="nav_search_bar" />
+                <button class="nav_serach_bar-btn">search</button>
+            </div>
+        </div>
+    </nav>
+    <main class="page__container">
+        <!--                                                Banner                                                             -->
+        <section class="banner-section">
+            <div class="banner-wrapper">
+                <div class="banner-tag-section">
+                    <div class="overlay-container mob">
+                        <p class="t-heading-500m">
+                            Partner
+                            <br />
+                            With Us.
+                        </p>
+                    </div>
+                </div>
+                <div class="banner-content">
+                    <div class="banner-desc">
+                        <p class="t-tagline-200r">
+                            Aenean molestie vestibulum ultrices. Donec nisi elit, tristique sit amet diam eget, cursus
+                            vulputate sem. In nec rutrum
+                            metus. Vestibulum ac ante tellus.
+                        </p>
+                    </div>
+                    <div class="banner-title">
+                        <h1 class="t-heading-300">
+                            Lorem ipsum
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--                                                Placeholder                                                             -->
+        <section class="placeholder-section">
+            <svg class="placeholder-area" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100%" height="100%" fill="#C4C4C4" />
+                <path
+                    d="M326.5 262.5C339.167 299.5 409.5 339.8 589.5 205C814.5 36.4997 802 273 929.5 280C1057 287 1254.5 243.5 1277.5 194"
+                    stroke="black" />
+            </svg>
+        </section>
+        <!--                                                Stats                                                             -->
+        <section class="stats-section">
+            <div class="stats-block">
+                <div class="stats-col-one">
+                    <div class="block-title">
+                        <h2 class="t-heading-500m">
+                            Lorem
+                            <br>
+                            ipsum.
+                        </h2>
+                    </div>
+                    <div class="block-desc">
+                        <p class="t-heading-700">
+                            99%
+                        </p>
+                    </div>
+                </div>
+                <div class="stats-col-two">
+                    <div class="block-content">
+                        <p class="t-tagline-100m">
+                            Aenean molestie vestibulum ultrices. Donec nisi elit, tristique sit amet diam eget, cursus
+                            vulputate sem. In nec rutrum
+                            metus. Vestibulum ac ante tellus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-chart-container">
+                <div class="stats-chart-col">
+                    <svg width="191" height="191" viewBox="0 0 191 191" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 0H11.9375V179.062H191V191H0V0ZM176.878 37.1614C177.485 37.6581 177.988 38.2696 178.359 38.9609C178.729 39.6522 178.96 40.4098 179.038 41.1902C179.115 41.9707 179.038 42.7589 178.811 43.5096C178.584 44.2603 178.211 44.9589 177.714 45.5654L123.995 111.222C123.467 111.866 122.81 112.393 122.066 112.768C121.322 113.143 120.508 113.359 119.676 113.4C118.844 113.442 118.012 113.309 117.235 113.01C116.457 112.711 115.751 112.252 115.161 111.663L84.2787 80.7811L40.6353 140.791C39.6805 142.005 38.2924 142.802 36.7625 143.013C35.2327 143.225 33.6803 142.836 32.4315 141.927C31.1827 141.019 30.3348 139.661 30.0659 138.14C29.7971 136.619 30.1282 135.053 30.9897 133.772L78.7398 68.1154C79.2466 67.4172 79.8987 66.8372 80.6513 66.4153C81.4039 65.9935 82.2389 65.7397 83.099 65.6717C83.959 65.6036 84.8236 65.7228 85.6332 66.021C86.4427 66.3192 87.178 66.7894 87.7884 67.3991L118.933 98.556L168.474 37.9971C168.971 37.39 169.582 36.8869 170.273 36.5163C170.965 36.1457 171.722 35.9151 172.503 35.8375C173.283 35.7598 174.071 35.8368 174.822 36.064C175.573 36.2912 176.271 36.6641 176.878 37.1614V37.1614Z" />
+                    </svg>
+                </div>
+                <div class="stats-chart-col">
+                    <svg width="198" height="192" viewBox="0 0 198 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M192.312 177.938V191.625H7.53125L0.6875 184.781V0H14.375V177.938H192.312Z" />
+                        <path
+                            d="M164.937 43.896L94.5013 114.346H84.8105L62.2809 91.8022L12.3763 141.721L2.68555 132.03L57.4355 77.2798H67.1263L89.6559 99.8231L160.092 29.3735H169.769L197.144 56.7485L187.467 66.4393L164.937 43.896Z" />
+                    </svg>
+                </div>
+            </div>
+            <div class="stats-desc">
+                <p class="t-tagline-100r">
+                    Aenean molestie vestibulum ultrices. Donec nisi elit, tristique sit amet diam eget, cursus vulputate
+                    sem. In nec rutrum
+                    metus. Vestibulum ac ante tellus. Maecenas congue vulputate neque at elementum. Donec nisi elit,
+                    tristique sit amet diam
+                    eget, cursus vulputate sem. In nec rutrum metus. Vestibulum ac ante tellus. Maecenas congue
+                    vulputate neque at
+                    elementum. Aliquam bibendum venenatis massa, dignissim imperdiet leo pharetra vitae. Donec tincidunt
+                    arcu arcu, quis
+                    aliquet mauris venenatis sit amet. Donec ultricies,
+                </p>
+            </div>
+        </section>
+        <!--                                                Grid                                                             -->
+
+        <section class="grid-section">
+            <div class="grid-container">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24.0471 14.7658C23.2034 18.9845 20.0224 22.9569 15.559 23.8445C13.3821 24.278 11.1239 24.0137 9.10598 23.0892C7.08806 22.1646 5.41325 20.627 4.32005 18.6953C3.22684 16.7635 2.77096 14.5361 3.01732 12.3302C3.26368 10.1242 4.19972 8.05226 5.69216 6.40926C8.75329 3.03764 13.9221 2.10951 18.1409 3.79701"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.70312 13.0781L13.9219 17.2969L24.0469 6.32812" stroke="black" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="grid-content">
+                    <h4 class="t-tagline-100m">
+                        Lorem ipsum
+                    </h4>
+                    <p class="t-tagline-50r">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-container">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24.0471 14.7658C23.2034 18.9845 20.0224 22.9569 15.559 23.8445C13.3821 24.278 11.1239 24.0137 9.10598 23.0892C7.08806 22.1646 5.41325 20.627 4.32005 18.6953C3.22684 16.7635 2.77096 14.5361 3.01732 12.3302C3.26368 10.1242 4.19972 8.05226 5.69216 6.40926C8.75329 3.03764 13.9221 2.10951 18.1409 3.79701"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.70312 13.0781L13.9219 17.2969L24.0469 6.32812" stroke="black" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="grid-content">
+                    <h4 class="t-tagline-100m">
+                        Lorem ipsum
+                    </h4>
+                    <p class="t-tagline-50r">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-container">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24.0471 14.7658C23.2034 18.9845 20.0224 22.9569 15.559 23.8445C13.3821 24.278 11.1239 24.0137 9.10598 23.0892C7.08806 22.1646 5.41325 20.627 4.32005 18.6953C3.22684 16.7635 2.77096 14.5361 3.01732 12.3302C3.26368 10.1242 4.19972 8.05226 5.69216 6.40926C8.75329 3.03764 13.9221 2.10951 18.1409 3.79701"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.70312 13.0781L13.9219 17.2969L24.0469 6.32812" stroke="black" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="grid-content">
+                    <h4 class="t-tagline-100m">
+                        Lorem ipsum
+                    </h4>
+                    <p class="t-tagline-50r">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="grid-container">
+                <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24.0471 14.7658C23.2034 18.9845 20.0224 22.9569 15.559 23.8445C13.3821 24.278 11.1239 24.0137 9.10598 23.0892C7.08806 22.1646 5.41325 20.627 4.32005 18.6953C3.22684 16.7635 2.77096 14.5361 3.01732 12.3302C3.26368 10.1242 4.19972 8.05226 5.69216 6.40926C8.75329 3.03764 13.9221 2.10951 18.1409 3.79701"
+                        stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9.70312 13.0781L13.9219 17.2969L24.0469 6.32812" stroke="black" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="grid-content">
+                    <h4 class="t-tagline-100m">
+                        Lorem ipsum
+                    </h4>
+                    <p class="t-tagline-50r">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--                                                Contact                                                             -->
+
+        <section class="contact-section">
+            <div class="contact-wrapper row">
+                <div class="mob-tag-section">
+                    <div class="overlay-container ">
+                        <p class="t-heading-500m">
+                            Contact
+                            <br />
+                            Us.
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-content col-9">
+                    <form action="#" class="contact-form">
+                        <div class="contact-input-container">
+                            <div class="contact-field-wrap">
+                                <label for="name" class="t-tagline-100m">
+                                    Name
+                                </label>
+                                <input type="text" id="name" class="contact-input">
+                            </div>
+                        </div>
+                        <div class="contact-input-container">
+                            <div class="contact-field-wrap">
+                                <label for="detail1" class="t-tagline-100m">
+                                    Details
+                                </label>
+                                <input type="text" id="detail1" class="contact-input">
+                            </div>
+                        </div>
+                        <div class="contact-input-container">
+                            <div class="contact-field-wrap">
+                                <label for="detail2" class="t-tagline-100m">
+                                    Details
+                                </label>
+                                <input type="text" id="detail2" class="contact-input">
+                            </div>
+                        </div>
+                        <div class="contact-input-container">
+                            <div class="contact-field-wrap">
+                                <label for="detail2" class="t-tagline-100m">
+                                    Details
+                                </label>
+                                <input type="text" id="detail2" class="contact-input">
+                            </div>
+                        </div>
+                        <div class="contact-btn-wrap">
+                            <button class="contact-btn">
+                                <small class="btn-label t-tagline-100m">Send</small>
+                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 14H14V16H0V14ZM4.6 11.3L0 6.7L2 4.8L4.6 7.4L12 0L14 2L4.6 11.3Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact-tag-section col-2">
+                    <div class="r-overlay-container">
+                        <p class="t-heading-400">
+                            Contact
+                            <br />
+                            Us.
+                        </p>
+                    </div>
+                    <svg width="264" height="188" viewBox="0 0 264 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M263 0V231H2" stroke="black" />
+                        <path d="M7 224.5L1.5 231L7 237" stroke="black" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <!--                                                Footer                                                             -->
+        <footer>
+            <div class=" footer_container">
+                <div class="footer_col-1">
+                    <img class="footer_logo" src="assets/logo-big_light.svg" alt="logo big" />
+                    <p>
+                        Aenean molestie vestibulum ultrices. <br />Donec nisi elit,
+                        tristique sit amet
+                    </p>
+                </div>
+                <div class="footer_col-2">
+                    <div class="footer_links-container">
+                        <div class="footer_links t-tagline-100m">
+                            <a href="#" class="footer_link">About</a>
+                            <a href="#" class="footer_link">Mail</a>
+                            <a href="#" class="footer_link">Contact</a>
+                            <a href="privacy.html" class="footer_link">Privacy Policy</a>
+                            <a href="#" class="footer_link">Address</a>
+                            <a href="disclaimer.html" class="footer_link">Disclaimer</a>
+                        </div>
+                        <div class="footer_social-links">
+                            <a href="#" class="footer_link">
+                                <img src="assets/youtube-dark.svg" alt="stone age youtube" />
+                            </a>
+                            <a href="#" class="footer_link">
+                                <img src="assets/twitter-dark.svg" alt="stone age youtube" />
+                            </a>
+                            <a href="#" class="footer_link">
+                                <img src="assets/instagram-dark.svg" alt="stone age youtube" />
+                            </a>
+                            <a href="#" class="footer_link">
+                                <img src="assets/facebook-dark.svg" alt="stone age youtube" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="scripts/nav.js"></script>
+</body>
+
+</html>
