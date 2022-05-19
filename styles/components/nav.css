@@ -6,7 +6,7 @@
   justify-content: space-evenly;
   /* overflow: hidden; */
   column-gap: 1rem;
- 
+  user-select: none;
   padding-bottom: var(--r64);
   position: relative;
 }
@@ -116,14 +116,13 @@ body.dark .nav_serach_bar-btn {
 .sub_nav.active, .search_bar.active {
   display: flex;
   justify-content: center;  
-  
+  transition: all 0.2s ease-out;
   /* background-color: var(--bg150);     */
 }
 .search_bar-container{
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    position: absolute;
     overflow: hidden;
     height: 60px;
     width: 150vh;
@@ -135,10 +134,10 @@ body.dark .nav_serach_bar-btn {
   align-items: center;
   column-gap: 4rem;
   justify-content: center;
-  position: absolute;
   overflow: hidden;
   height: 60px;
   width: 100vh;
+  user-select: none;
 }
 @media (max-width: 768px) {
   .nav_item_social {
