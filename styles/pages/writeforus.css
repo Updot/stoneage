@@ -148,8 +148,7 @@ body.dark .form-content {
 .submit-btn {
     background-color: var(--accent);
     white-space: nowrap;
-    display: flex;
-    align-items: center;
+    text-align: center;
     justify-content: space-between;
     padding: 10px 12px;
     width: 180px;
@@ -170,15 +169,6 @@ body.dark .form-content {
     justify-content: space-between;
     padding: 10px 12px;
     width: 180px;
-}
-
-
-.submit-btn svg>path {
-    stroke: none;
-}
-
-body.dark .submit-btn svg>path {
-    fill: white;
 }
 
 body.dark .form-input {
