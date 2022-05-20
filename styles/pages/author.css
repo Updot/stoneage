@@ -139,8 +139,7 @@ body.dark .author_article-banner {
 }
 
 .author_article-para {
-    margin-top: var(--r16);
-    margin-bottom: var(--r16);
+    
 }
 
 .author_article-link {
@@ -184,9 +183,10 @@ body.dark .author_article-see-more {
 @media (max-width: 768px) {
     .banner-section{
         height: 100%;
-        margin-top: var(--r100);
+        margin-top: var(--r16);
     }
     .banner-container{
+        padding-top: var(--r16);
         padding-bottom: var(--r30);
     }
     .banner-content-wrapper{
@@ -207,13 +207,13 @@ body.dark .author_article-see-more {
         text-align: center;
     }
     .overlay-container {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     .overlay-container p {
         margin-top: var(--r30);
-        margin-left: var(--r56);
+        margin-left: var(--r48);
     }
     .ad-area{
         display: none;
@@ -231,14 +231,15 @@ body.dark .author_article-see-more {
         height: 80vh;
         width: 100%;
         margin-top: var(--r30);
+        column-gap: 0;
     }
 
     .author_article-banner {
         width: 100%;
-        height: 200px;
+        height: 130px;
     }
 
     .author_article-column {
-        width: 70%;
+        width: 60%;
     }
 }

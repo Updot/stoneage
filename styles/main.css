@@ -259,7 +259,7 @@ p{
 
 .t-tagline-200b {
     font-family: var(--default-font);
-    font-size: clamp(18px, calc((18 / (var(--screen) / 100)) * 1vw), 24px);
+    font-size: clamp(16px, calc((18 / (var(--screen) / 100)) * 1vw), 24px);
     font-weight: 700;
     line-height: 1.3;
 }
