@@ -263,11 +263,20 @@ body.dark .form-input {
     }
     .form-btn-wrap{
         width: 100%;
-        
+        flex-direction: column;
+        row-gap: 1rem;
+        column-gap: 0;
+        align-items: unset;
     }
-    .submit-btn{
+    .upload-btn, .submit-btn{
         padding: 8px 10px;
         width: 140px;
+    }
+    .upload-btn{
+        justify-self: flex-start;
+    }
+    .submit-btn{
+        align-self: flex-end;
     }
 
 }
