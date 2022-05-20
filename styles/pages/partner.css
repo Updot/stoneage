@@ -135,12 +135,13 @@ body.dark .stats-chart-col>svg>path {
     padding-top: var(--r48);
     padding-bottom: var(--r64);
 }
+.stats-desc p {
+    line-height: 40px;
+}
 .stats-desc{
     border-bottom: var(--bg300) thin solid;
 }
-.stats-desc p{
-    line-height: 40px;
-}
+
 body.dark .stats-desc {
     border-bottom: var(--bg100) thin solid;
 }
