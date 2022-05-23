@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pressroom</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components/nav.css" />
+    <link rel="stylesheet" href="styles/components/footer.css" />
+    <link rel="stylesheet" href="styles/pages/pressroom.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_main">
+            <div class="nav_section">
+                <a href="/" class="nav_item">
+                    <img class="nav_item_logo" src="assets/logo2.svg" alt="stone age logo" />
+                </a>
+                <div class="nav_item nav_item_social">
+                    <img src="assets/youtube.svg" alt="stone age youtube" />
+                </div>
+                <div class="nav_item nav_item_social">
+                    <img src="assets/twitter.svg" alt="stone age twitter" />
+                </div>
+                <div class="nav_item nav_item_social">
+                    <img src="assets/instagram.svg" alt="stone age instagram" />
+                </div>
+                <div class="nav_item nav_search_btn" onclick="handleSearchBarToggle()">
+                    <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.1942 19.8067C21.6477 19.2833 21.1159 18.7448 20.5993 18.192C20.1653 17.751 19.904 17.4302 19.904 17.4302L16.6373 15.8703C17.9451 14.3871 18.6669 12.4776 18.6673 10.5002C18.6673 5.998 15.004 2.3335 10.5007 2.3335C5.99732 2.3335 2.33398 5.998 2.33398 10.5002C2.33398 15.0023 5.99732 18.6668 10.5007 18.6668C12.5575 18.6668 14.4323 17.8968 15.8708 16.638L17.4307 19.9047C17.4307 19.9047 17.7515 20.166 18.1925 20.6C18.644 21.0235 19.2378 21.5963 19.8072 22.1948L21.3915 23.8188L22.0962 24.5725L24.5707 22.098L23.817 21.3933C23.3748 20.9593 22.7845 20.383 22.1942 19.8067V19.8067ZM10.5007 16.3335C7.28415 16.3335 4.66732 13.7167 4.66732 10.5002C4.66732 7.28366 7.28415 4.66683 10.5007 4.66683C13.7172 4.66683 16.334 7.28366 16.334 10.5002C16.334 13.7167 13.7172 16.3335 10.5007 16.3335Z"
+                            fill="#8E8E8E" />
+                    </svg>
+                </div>
+            </div>
+            <div class="nav_section-btn">
+                <div class="nav_item sub_nav_btn" onclick="handleSubNavToggle()">
+                    <svg width="37" height="31" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="8" cy="8" r="8" />
+                        <ellipse cx="28" cy="12.5" rx="9" ry="8.5" />
+                        <circle cx="13.5" cy="25.5" r="5.5" />
+                    </svg>
+                </div>
+            </div>
+            <div class="nav_section">
+                <div class="nav_item_category">
+                    <a href="#" class="t-tagline-50r">category 1</a>
+                </div>
+                <div class="nav_item_category active">
+                    <a href="#" class="t-tagline-50r">category 2</a>
+                </div>
+                <div class="nav_item_category">
+                    <a href="#" class="t-tagline-50r">category 3</a>
+                </div>
+                <div class="nav_item_category">
+                    <a href="#" class="t-tagline-50r">category 4</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- subnav -->
+        <div class="sub_nav">
+            <div class="sub_nav_items">
+                <div class="sub_nav_item">
+                    <a href="#" class="sub_nav_link">HOME</a>
+                </div>
+                <div class="sub_nav_item">
+                    <a href="#" class="sub_nav_link">ABOUT</a>
+                </div>
+                <div class="sub_nav_item">
+                    <a href="javascript:void(0)" onclick="handleThemeToggle()">
+                        <img class="theme_toggle" src="assets/dark-icon.svg" alt="theme icon" />
+                    </a>
+                </div>
+                <div class="sub_nav_item">
+                    <a href="#" class="sub_nav_link">CONTACT</a>
+                </div>
+                <div class="sub_nav_item">
+                    <a href="starthere.html" class="sub_nav_link">ADVERTISE</a>
+                </div>
+            </div>
+        </div>
+        <!-- search -->
+        <div class="search_bar">
+            <div class="search_bar-container">
+                <input type="search" class="nav_search_bar" />
+                <button class="nav_serach_bar-btn">search</button>
+            </div>
+        </div>
+    </nav>
+    <main class="page__container">
+        <!--                                                Banner                                                             -->
+        <section class="banner-section">
+            <div class="banner-container">
+                <div class="overlay-container mob">
+                    <p class="t-heading-500">
+                        Pressroom.
+                    </p>
+                </div>
+                <div class="banner-desc">
+                    <p class="t-tagline-100r">
+                        Aenean molestie vestibulum ultrices. Donec nisi elit, tristique sit amet diam eget, cursus
+                        vulputate
+                        sem. In nec rutrum
+                        metus. Vestibulum ac ante tellus. Maecenas congue vulputate neque at elementum.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--                                                Other Articles                                                             -->
+        <section class="other_articles-section">
+            <div class="other_articles-wrapper row">
+                <div class="tag_ad-column col-3">
+                    <div class="overlay-container mob">
+                        <p class="t-heading-400m">
+                            Updates.
+                        </p>
+                    </div>
+                    <div class="ad-area">
+                        <div class="ad-post">
+                            <img class="ad-image"
+                                src="https://images.pexels.com/photos/3806753/pexels-photo-3806753.jpeg?cs=srgb&dl=pexels-markus-spiske-3806753.jpg&fm=jpg"
+                                alt="ad image">
+                        </div>
+                        <!-- <div class="ad-post">
+                            <img class="ad-image"
+                                src="https://images.pexels.com/photos/3806753/pexels-photo-3806753.jpeg?cs=srgb&dl=pexels-markus-spiske-3806753.jpg&fm=jpg"
+                                alt="ad image">
+                        </div> -->
+                    </div>
+                </div>
+                <div class="other_articles-column col-8">
+                    <div class="other_articles-scroll-area row">
+                        <!-- API DATA -->
+                    </div>
+                    <div class="other_article-see-more">
+                        <a class="see_more-link t-paragraph" href="#">
+                            See More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--                                                Brand                                                             -->
+        <section class="brand-section">
+            <div class="brand-container">
+                <div class="tag_ad-column">
+                    <div class="overlay-container mob">
+                        <p class="t-heading-400m">
+                            Brand Assets.
+                        </p>
+                    </div>
+                </div>
+                <div class="brand-assets">
+                    <div class="brand-grid">
+                        <div class="brand-card-wrapper">
+                            <svg width="32" height="42" viewBox="0 0 32 42" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M31.3902 10.9689L21.723 1.29727C21.4535 1.02773 21.0852 0.875 20.7033 0.875H1.625C0.829883 0.875 0.1875 1.51738 0.1875 2.3125V39.6875C0.1875 40.4826 0.829883 41.125 1.625 41.125H30.375C31.1701 41.125 31.8125 40.4826 31.8125 39.6875V11.9842C31.8125 11.6023 31.6598 11.2385 31.3902 10.9689ZM10.9688 16.0586C11.9615 16.0586 12.7656 16.8627 12.7656 17.8555C12.7656 18.8482 11.9615 19.6523 10.9688 19.6523C9.97598 19.6523 9.17188 18.8482 9.17188 17.8555C9.17188 16.8627 9.97598 16.0586 10.9688 16.0586ZM24.2656 29.2656H7.73438C7.4334 29.2656 7.26719 28.9197 7.45137 28.6861L11.9346 22.9721C11.9682 22.9291 12.0111 22.8944 12.0602 22.8705C12.1092 22.8466 12.163 22.8342 12.2176 22.8342C12.2721 22.8342 12.3259 22.8466 12.375 22.8705C12.424 22.8944 12.467 22.9291 12.5006 22.9721L14.3469 25.326L17.8418 20.8697C17.8754 20.8268 17.9184 20.792 17.9674 20.7681C18.0164 20.7443 18.0703 20.7318 18.1248 20.7318C18.1793 20.7318 18.2332 20.7443 18.2822 20.7681C18.3312 20.792 18.3742 20.8268 18.4078 20.8697L24.5396 28.6861C24.7328 28.9197 24.5621 29.2656 24.2656 29.2656ZM20.043 12.6445V4.19023L28.4973 12.6445H20.043Z"
+                                    fill="black" />
+                            </svg>
+                            <p class="t-tagline-50r">Lorem ipsum</p>
+                        </div>
+                        <div class="brand-card-wrapper">
+                            <svg width="32" height="36" viewBox="0 0 32 36" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.2188 9.79688V7.82812C23.2188 7.64766 23.0711 7.5 22.8906 7.5H7.14062C6.96016 7.5 6.8125 7.64766 6.8125 7.82812V9.79688C6.8125 9.97734 6.96016 10.125 7.14062 10.125H22.8906C23.0711 10.125 23.2188 9.97734 23.2188 9.79688ZM7.14062 13.4062C6.96016 13.4062 6.8125 13.5539 6.8125 13.7344V15.7031C6.8125 15.8836 6.96016 16.0312 7.14062 16.0312H14.6875C14.868 16.0312 15.0156 15.8836 15.0156 15.7031V13.7344C15.0156 13.5539 14.868 13.4062 14.6875 13.4062H7.14062ZM22.5625 18.1641C17.6693 18.1641 13.7031 22.1303 13.7031 27.0234C13.7031 31.9166 17.6693 35.8828 22.5625 35.8828C27.4557 35.8828 31.4219 31.9166 31.4219 27.0234C31.4219 22.1303 27.4557 18.1641 22.5625 18.1641ZM26.9717 31.4326C25.7945 32.6098 24.2277 33.2578 22.5625 33.2578C20.8973 33.2578 19.3305 32.6098 18.1533 31.4326C16.9762 30.2555 16.3281 28.6887 16.3281 27.0234C16.3281 25.3582 16.9762 23.7914 18.1533 22.6143C19.3305 21.4371 20.8973 20.7891 22.5625 20.7891C24.2277 20.7891 25.7945 21.4371 26.9717 22.6143C28.1488 23.7914 28.7969 25.3582 28.7969 27.0234C28.7969 28.6887 28.1488 30.2555 26.9717 31.4326ZM26.2129 23.9062H24.3959C24.2893 23.9062 24.1908 23.9555 24.1293 24.0416L21.5248 27.6428L20.5773 26.3344C20.547 26.2921 20.5069 26.2578 20.4605 26.2342C20.4141 26.2106 20.3628 26.1986 20.3107 26.199H18.502C18.2354 26.199 18.0795 26.5025 18.2354 26.7199L21.2623 30.9076C21.3936 31.0881 21.6602 31.0881 21.7914 30.9076L26.4754 24.4271C26.6354 24.2098 26.4795 23.9062 26.2129 23.9062ZM13.0469 31.9453H3.53125V3.07031H26.5V17.1797C26.5 17.3602 26.6477 17.5078 26.8281 17.5078H29.125C29.3055 17.5078 29.4531 17.3602 29.4531 17.1797V1.42969C29.4531 0.703711 28.8666 0.117188 28.1406 0.117188H1.89062C1.16465 0.117188 0.578125 0.703711 0.578125 1.42969V33.5859C0.578125 34.3119 1.16465 34.8984 1.89062 34.8984H13.0469C13.2273 34.8984 13.375 34.7508 13.375 34.5703V32.2734C13.375 32.093 13.2273 31.9453 13.0469 31.9453Z"
+                                    fill="black" />
+                            </svg>
+                            <p class="t-tagline-50r">Lorem ipsum</p>
+                        </div>
+                        <div class="brand-card-wrapper">
+                            <svg width="46" height="32" viewBox="0 0 46 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M37.0875 12.2432C36.4437 8.98046 34.6871 6.04248 32.1177 3.93106C29.5483 1.81963 26.3256 0.665752 23 0.666504C17.4608 0.666504 12.65 3.80984 10.2542 8.40984C7.43711 8.71426 4.83193 10.049 2.93919 12.1575C1.04644 14.2661 -0.000329095 16.9997 7.76111e-08 19.8332C7.76111e-08 26.1773 5.15583 31.3332 11.5 31.3332H36.4167C41.7067 31.3332 46 27.0398 46 21.7498C46 16.6898 42.0708 12.5882 37.0875 12.2432ZM20.5275 24.2223C20.3502 24.4 20.1396 24.541 19.9077 24.6372C19.6758 24.7333 19.4273 24.7829 19.1763 24.7829C18.9252 24.7829 18.6767 24.7333 18.4448 24.6372C18.2129 24.541 18.0023 24.4 17.825 24.2223L13.8 20.2165C13.6226 20.0391 13.4818 19.8284 13.3858 19.5965C13.2897 19.3647 13.2403 19.1162 13.2403 18.8653C13.2403 18.3584 13.4416 17.8724 13.8 17.514C14.1584 17.1556 14.6444 16.9543 15.1512 16.9543C15.6581 16.9543 16.1441 17.1556 16.5025 17.514L19.1667 20.1782L27.7533 11.5915C28.1117 11.2331 28.5978 11.0318 29.1046 11.0318C29.6114 11.0318 30.0975 11.2331 30.4558 11.5915C30.8142 11.9499 31.0155 12.4359 31.0155 12.9428C31.0155 13.4496 30.8142 13.9356 30.4558 14.294L20.5275 24.2223Z"
+                                    fill="black" />
+                            </svg>
+                            <p class="t-tagline-50r">Lorem ipsum</p>
+                        </div>
+                        <div class="brand-card-wrapper">
+                            <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M26.6 16.8V21H21V26.6H16.8V21H5.6V9.8H0V5.6H5.6V0H9.8V5.6H19.6L23.8 1.4L25.2 2.8L21 7V16.8H26.6ZM15.4 9.8H9.8V15.4L15.4 9.8ZM11.2 16.8H16.8V11.2L11.2 16.8Z"
+                                    fill="black" />
+                            </svg>
+                            <p class="t-tagline-50r">Lorem ipsum</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--                                                Footer                                                             -->
+        <footer>
+            <div class=" footer_container">
+                <div class="footer_col-1">
+                    <img class="footer_logo" src="assets/logo-big_light.svg" alt="logo big" />
+                    <p>
+                        Aenean molestie vestibulum ultrices. <br />Donec nisi elit,
+                        tristique sit amet
+                    </p>
+                </div>
+                <div class="footer_col-2">
+                    <div class="footer_links-container">
+                        <div class="footer_links t-tagline-100m">
+                            <a href="#" class="footer_link">About</a>
+                            <a href="#" class="footer_link">Mail</a>
+                            <a href="#" class="footer_link">Contact</a>
+                            <a href="privacy.html" class="footer_link">Privacy Policy</a>
+                            <a href="#" class="footer_link">Address</a>
+                            <a href="disclaimer.html" class="footer_link">Disclaimer</a>
+                        </div>
+                        <div class="footer_social-links">
+                            <a href="#" class="footer_link">
+                                <img src="assets/youtube-dark.svg" alt="stone age youtube" />
+                            </a>
+                            <a href="#" class="footer_link">
+                                <img src="assets/twitter-dark.svg" alt="stone age youtube" />
+                            </a>
+                            <a href="#" class="footer_link">
+                                <img src="assets/instagram-dark.svg" alt="stone age youtube" />
+                            </a>
+                            <a href="#" class="footer_link">
+                                <img src="assets/facebook-dark.svg" alt="stone age youtube" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/pressroom.js"></script>
+</body>
+
+</html>
