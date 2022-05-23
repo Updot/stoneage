@@ -1,120 +1,119 @@
 .banner-section {
-    width: 100%;
-    height: 100vh;
-    margin-top: var(--r48);
+  width: 100%;
+  height: 100vh;
+  margin-top: var(--r48);
 }
 
 .banner-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .banner-section {
-    border-bottom: thin var(--bg300) solid;
+  border-bottom: thin var(--bg300) solid;
 }
 
 body.dark .banner-section {
-    border-bottom: thin var(--bg100) solid;
+  border-bottom: thin var(--bg100) solid;
 }
 
 .banner-image-wrapper {
-    width: 500px;
-    height: 100vh;   
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    padding-bottom: var(--r30);
+  width: 500px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: var(--r30);
 }
-.banner-image{
-    height: 100%;
-    object-fit: cover;
+.banner-image {
+  height: 100%;
+  object-fit: cover;
 }
 .overlay-container {
-    background-color: var(--accent);
-    width: 140px;
-    height: 140px;
-    display: flex;
-    /* margin-right: auto; */
-    align-items: flex-start;
-    margin-bottom: var(--r30);
-    align-self: flex-start;
+  background-color: var(--accent);
+  width: 140px;
+  height: 140px;
+  display: flex;
+  /* margin-right: auto; */
+  align-items: flex-start;
+  margin-bottom: var(--r30);
+  align-self: flex-start;
 }
 
 .overlay-container p {
-    margin-top: var(--r48);
-    margin-left: var(--r64);
-    white-space: nowrap;
+  margin-top: var(--r48);
+  margin-left: var(--r64);
+  white-space: nowrap;
 }
-.banner-content-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    row-gap: 3rem;
-    max-width: 500px;
+.banner-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  row-gap: 3rem;
+  max-width: 500px;
 }
-.banner-desc p{
-    line-height: 2.65;
+.banner-desc p {
+  line-height: 2.65;
 }
-.mob-banner-desc{
-    display: none;
+.mob-banner-desc {
+  display: none;
 }
-.starthere-container{
-    margin-top: var(--r30);
+.starthere-container {
+  margin-top: var(--r30);
 }
-.starthere-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 3rem;
-    padding-bottom: var(--r48);
+.starthere-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 3rem;
+  padding-bottom: var(--r48);
 }
-
 
 @media (max-width: 768px) {
-    .banner-section{
-        height: 100%;
-    } 
-    .banner-container{
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-    .banner-image-wrapper{
-        width: 200px;
-        height: auto;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-    .banner-content-wrapper{
-        align-items: flex-start;
-        max-width: 100%;
-    }
-    .banner-desc{
-        display: none;
-    }
-    .overlay-container {
-        width: 80px;
-        height: 80px;        
-    }
-    .overlay-container p {
-        margin-top: var(--r48);
-        margin-left: 10px;
-    }
-    .mob-banner-desc{
-        display: block;
-        margin-top: var(--r30);
-        margin-bottom: var(--r30);
-    }
-    .mob-banner-desc p{
-        line-height: 25px;
-    }
-    .starthere-wrapper{
-        border-bottom: thin var(--bg300) solid;
-    }
+  .banner-section {
+    height: 100%;
+  }
+  .banner-container {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .banner-image-wrapper {
+    width: 200px;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .banner-content-wrapper {
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .banner-desc {
+    display: none;
+  }
+  .overlay-container {
+    width: 80px;
+    height: 80px;
+  }
+  .overlay-container p {
+    margin-top: var(--r48);
+    margin-left: 10px;
+  }
+  .mob-banner-desc {
+    display: block;
+    margin-top: var(--r30);
+    margin-bottom: var(--r30);
+  }
+  .mob-banner-desc p {
+    line-height: 25px;
+  }
+  .starthere-wrapper {
+    border-bottom: thin var(--bg300) solid;
+  }
 
-    body.dark .starthere-wrapper {
-        border-bottom: thin var(--bg100) solid;
-    }
+  body.dark .starthere-wrapper {
+    border-bottom: thin var(--bg100) solid;
+  }
 }
