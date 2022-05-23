@@ -13,6 +13,7 @@
   --bg450: #3f3f3f;
   --bg500: #f4f4f4;
   --bg550: #767676;
+  --bg600: #ebebeb;
   --text100: #fff;
   --text200: #000;
 
@@ -204,7 +205,7 @@ p {
   font-size: clamp(32px, calc((64 / (var(--screen) / 100)) * 1vw), 85px);
   font-weight: 600;
   line-height: 1.2;
-
+}
 .t-heading-500 {
   font-family: var(--default-font);
   font-size: clamp(32px, calc((64 / (var(--screen) / 100)) * 1vw), 85px);
@@ -278,6 +279,12 @@ p {
   font-family: var(--default-font);
   font-size: clamp(16px, calc((18 / (var(--screen) / 100)) * 1vw), 24px);
   font-weight: 700;
+  line-height: 1.3;
+}
+.t-tagline-200m {
+  font-family: var(--default-font);
+  font-size: clamp(18px, calc((18 / (var(--screen) / 100)) * 1vw), 24px);
+  font-weight: 600;
   line-height: 1.3;
 }
 
