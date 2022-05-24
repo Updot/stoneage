@@ -76,7 +76,7 @@
 }
 
 .r-overlay-container p {
-  margin-top: var(--r30);
+  margin-top: var(--r48);
   margin-left: var(--r64);
   white-space: nowrap;
 }
@@ -116,7 +116,7 @@ body.dark .form-content {
 .form-field-wrap {
   width: 100%;
   display: grid;
-  grid-template-columns: 200px min-content 1fr;
+  grid-template-columns: 180px max-content 1fr;
   column-gap: 2rem;
   /* margin-bottom: var(--r16); */
 }
@@ -127,7 +127,7 @@ body.dark .form-content {
 }
 
 .form-input {
-  width: 768px;
+  width: 700px;
   padding: 6px var(--r16);
 }
 .big {
@@ -137,7 +137,7 @@ body.dark .form-content {
   background-color: var(--bg250);
 }
 .form-btn-wrap {
-  width: 768px;
+  width: 700px;
   display: flex;
   align-items: center;
   justify-content: space-between;
