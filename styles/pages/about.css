@@ -2,6 +2,7 @@
   width: 100%;
   height: 70vh;
   margin-top: var(--r80);
+  margin-bottom: var(--r80);
 }
 .banner-container {
   display: flex;
@@ -11,12 +12,13 @@
   display: none;
 }
 .banner-desc-wrap {
-  height: 70vh;
-  max-width: 400px;
+  height: 80vh;
+  max-width: 480px;
   display: flex;
 }
 .banner-desc-wrap p {
   align-self: flex-end;
+  line-height: 1.68;
 }
 @media (max-width: 480px) {
   .banner-section,
