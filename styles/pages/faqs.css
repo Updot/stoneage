@@ -151,7 +151,7 @@ body.dark .accordion-button:not(.collapsed)::after {
   transform: rotate(-180deg);
 }
 body.dark .accordion-button::after {
-  background-image: url("stoneage/assets/arrowhead-light.svg");
+  background-image: url("/stoneage/assets/arrowhead-light.svg");
 }
 .accordion-item {
   background-color: transparent;
