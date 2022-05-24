@@ -310,7 +310,7 @@ body.dark .form-input {
     white-space: nowrap;
   }
   .form-content {
-    margin-top: -40px;
+    margin-top: var(--r16);
   }
   .form-content {
     height: 100%;
