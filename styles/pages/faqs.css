@@ -140,18 +140,18 @@ body.dark .accordion-button {
   color: var(--text100);
 }
 .accordion-button:not(.collapsed)::after {
-  background-image: url(/assets/arrowhead.svg);
+  background-image: url("/stoneage/assets/arrowhead.svg");
   transform: rotate(-180deg);
 }
 .accordion-button::after {
-  background-image: url(/assets/arrowhead.svg);
+  background-image: url("/stoneage/assets/arrowhead.svg");
 }
 body.dark .accordion-button:not(.collapsed)::after {
-  background-image: url(/assets/arrowhead-light.svg);
+  background-image: url("/stoneage/assets/arrowhead-light.svg");
   transform: rotate(-180deg);
 }
 body.dark .accordion-button::after {
-  background-image: url(/assets/arrowhead-light.svg);
+  background-image: url("stoneage/assets/arrowhead-light.svg");
 }
 .accordion-item {
   background-color: transparent;
