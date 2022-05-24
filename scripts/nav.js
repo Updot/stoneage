@@ -7,6 +7,8 @@ const search_bar = document.querySelector(".search_bar");
 const nav_search_btn = document.querySelector(".nav_search_btn");
 const header_logo = document.querySelector(".header_logo");
 const nav_item_logo = document.querySelector(".nav_item_logo");
+const dropdown_btn = document.querySelector(".active-category");
+const mob_dropdown = document.querySelector(".mob-nav_dropdown");
 
 // theme fetch
 window.onload = () => {
@@ -70,6 +72,25 @@ document.addEventListener("click", (e) => {
   !sub_nav_btn.contains(e.target) &&
     sub_nav.classList.contains("active") &&
     closeSubNav();
+});
+
+// category toggle
+
+const handleCategoryDropdownToggle = () => {
+  dropdown_btn.classList.toggle("active");
+  mob_dropdown.classList.toggle("active");
+  toggleNavLogo();
+};
+
+function closeCategoryDropDown() {
+  mob_dropdown.classList.remove("active");
+  dropdown_btn.classList.remove("active");
+  toggleNavLogo();
+}
+document.addEventListener("click", (e) => {
+  !dropdown_btn.contains(e.target) &&
+    mob_dropdown.classList.contains("active") &&
+    closeCategoryDropDown();
 });
 
 // search

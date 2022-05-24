@@ -94,15 +94,12 @@ body.dark .author-social-link svg > path {
   overflow-x: scroll;
   margin-top: var(--r48);
   column-gap: 2rem;
+  padding: var(--r30) var(--r16);
+  flex-wrap: nowrap;
 }
 
 .author_articles-scroll-area::-webkit-scrollbar {
   display: none;
-}
-
-.author_articles-scroll-area {
-  padding: var(--r30) var(--r16);
-  flex-wrap: nowrap;
 }
 
 .author_article-column {

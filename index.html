@@ -182,7 +182,12 @@
             </svg>
           </div>
         </div>
-        <div class="nav_section">
+        <div class="mob-nav_section-category">
+          <div class="active-category">
+            <a href="javascript:void(0)" class="t-tagline-50r" onclick="handleCategoryDropdownToggle()">category 1</a>
+          </div>
+        </div>
+        <div class="nav_section nav_section-category">
           <div class="nav_item_category">
             <a href="#" class="t-tagline-50r">category 1</a>
           </div>
@@ -197,7 +202,23 @@
           </div>
         </div>
       </div>
-
+      <!-- mobile category -->
+      <div class="mob-nav_dropdown">
+        <div class="mob-nav_section-category-list">
+          <div class="mobile-nav_item_category">
+            <a href="#" class="t-tagline-50r">category 1</a>
+          </div>
+          <div class="mobile-nav_item_category active">
+            <a href="#" class="t-tagline-50r">category 2</a>
+          </div>
+          <div class="mobile-nav_item_category">
+            <a href="#" class="t-tagline-50r">category 3</a>
+          </div>
+          <div class="mobile-nav_item_category">
+            <a href="#" class="t-tagline-50r">category 4</a>
+          </div>
+        </div>
+      </div>
       <!-- subnav -->
       <div class="sub_nav">
         <div class="sub_nav_items">
@@ -207,7 +228,7 @@
           <div class="sub_nav_item">
             <a href="#" class="sub_nav_link">ABOUT</a>
           </div>
-          <div class="sub_nav_item">
+          <div class="sub_nav_item theme_btn">
             <a href="javascript:void(0)" onclick="handleThemeToggle()">
               <img class="theme_toggle" src="assets/dark-icon.svg" alt="theme icon" />
             </a>
@@ -447,122 +468,7 @@
               </div>
             </div>
           </div>
-          <!-- 3 -->
-          <div class="category_container">
-            <div class="flex items-center">
-              <button class="category_btn">category 2</button>
-              <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
-                <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
-              </svg>
-            </div>
-            <div class="category_image-wrapper">
-              <img src="assets/category.svg" alt="category image" />
-            </div>
-            <div class="category_content-wrapper">
-              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-              <p class="t-tagline-50r">
-                Aenean molestie vestibulum ultrices. Donec nisi elit,
-                tristique sit amet diam eget, cursus vulputate sem. In nec
-                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                vulputate neque at elementum.
-              </p>
-              <div class="category_content_cta-link">
-                <small class="t-tagline-50r">Read more.</small>
-                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <!-- 4 -->
-          <div class="category_container">
-            <div class="flex items-center">
-              <button class="category_btn">category 2</button>
-              <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
-                <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
-              </svg>
-            </div>
-            <div class="category_image-wrapper">
-              <img src="assets/category.svg" alt="category image" />
-            </div>
-            <div class="category_content-wrapper">
-              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-              <p class="t-tagline-50r">
-                Aenean molestie vestibulum ultrices. Donec nisi elit,
-                tristique sit amet diam eget, cursus vulputate sem. In nec
-                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                vulputate neque at elementum.
-              </p>
-              <div class="category_content_cta-link">
-                <small class="t-tagline-50r">Read more.</small>
-                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <!-- 5 -->
-          <div class="category_container">
-            <div class="flex items-center">
-              <button class="category_btn">category 2</button>
-              <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
-                <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
-              </svg>
-            </div>
-            <div class="category_image-wrapper">
-              <img src="assets/category.svg" alt="category image" />
-            </div>
-            <div class="category_content-wrapper">
-              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-              <p class="t-tagline-50r">
-                Aenean molestie vestibulum ultrices. Donec nisi elit,
-                tristique sit amet diam eget, cursus vulputate sem. In nec
-                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                vulputate neque at elementum.
-              </p>
-              <div class="category_content_cta-link">
-                <small class="t-tagline-50r">Read more.</small>
-                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <!-- 6 -->
-          <div class="category_container">
-            <div class="flex items-center">
-              <button class="category_btn">category 2</button>
-              <svg width="60" height="20" viewBox="0 0 126 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 10.5146H123.5" stroke="black" stroke-width="2" />
-                <path d="M114.956 1.00014L123.941 9.98535L114.956 18.9706" stroke="black" stroke-width="2" />
-              </svg>
-            </div>
-            <div class="category_image-wrapper">
-              <img src="assets/category.svg" alt="category image" />
-            </div>
-            <div class="category_content-wrapper">
-              <h4 class="t-tagline-100m">Lorem ipsum dolor sit amet</h4>
-              <p class="t-tagline-50r">
-                Aenean molestie vestibulum ultrices. Donec nisi elit,
-                tristique sit amet diam eget, cursus vulputate sem. In nec
-                rutrum metus. Vestibulum ac ante tellus. Maecenas congue
-                vulputate neque at elementum.
-              </p>
-              <div class="category_content_cta-link">
-                <small class="t-tagline-50r">Read more.</small>
-                <svg width="12" height="12" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4 1.75H15.25V13M15.25 1.75L1.75 15.25L15.25 1.75Z" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </section>
