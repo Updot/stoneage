@@ -33,8 +33,8 @@ body.dark .banner-section {
 }
 .overlay-container {
   background-color: var(--accent);
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   display: flex;
   margin-right: auto;
   align-items: flex-start;
@@ -42,13 +42,16 @@ body.dark .banner-section {
 }
 
 .overlay-container p {
-  margin-top: var(--r48);
-  margin-left: var(--r64);
+  margin-top: var(--r16);
+  margin-left: var(--r30);
   white-space: nowrap;
 }
 .other_articles-section {
   margin-top: var(--r72);
   margin-bottom: var(--r72);
+}
+.other_articles-column {
+  margin-top: var(--r80);
 }
 .other_articles-scroll-area {
   height: 100vh;
@@ -163,6 +166,7 @@ body.dark .brand-section {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   row-gap: var(--r48);
+  column-gap: var(--r48);
   place-items: center center;
 }
 .brand-card-wrapper {
@@ -172,8 +176,8 @@ body.dark .brand-section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 150px;
+  width: 100%;
+  height: 180px;
 }
 .brand-card-wrapper {
   background-color: var(--bg600);
@@ -215,6 +219,9 @@ body.dark .brand-card-wrapper {
     margin-top: var(--r30);
   }
   .other_articles-column {
+    margin-top: var(--r16);
+  }
+  .other_articles-column {
     border-top: 0;
     width: 100%;
   }
@@ -225,7 +232,6 @@ body.dark .brand-card-wrapper {
   .other_articles-scroll-area {
     height: 80vh;
     width: 100%;
-    margin-top: var(--r30);
   }
   .other_article-banner {
     width: 100%;
@@ -238,6 +244,7 @@ body.dark .brand-card-wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     row-gap: var(--r48);
+    column-gap: 0;
     margin-top: var(--r30);
   }
   .brand-card-wrapper {
