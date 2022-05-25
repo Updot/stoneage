@@ -260,6 +260,12 @@ body.dark .form-content {
   justify-content: space-between;
   padding: 10px 12px;
   width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.submit-btn svg {
+  display: none;
 }
 
 body.dark .form-input {
@@ -339,12 +345,23 @@ body.dark .form-input {
     column-gap: 0;
     align-items: unset;
   }
+
   .submit-btn {
+    position: absolute;
+    bottom: 10px;
+    right: -15px;
     padding: 8px 10px;
     width: 140px;
+    justify-content: space-between;
   }
-  .submit-btn {
-    align-self: flex-end;
+  .submit-btn svg {
+    display: block;
+  }
+  .submit-btn svg > path {
+    stroke: none;
+  }
+  body.dark .submit-btn svg > path {
+    fill: white;
   }
   .desc-section {
     display: none;
