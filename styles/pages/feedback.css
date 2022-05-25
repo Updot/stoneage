@@ -102,7 +102,9 @@ body.dark .form-content {
   align-items: center;
   justify-content: center;
 }
-
+.submit-btn svg {
+  display: none;
+}
 body.dark .form-input {
   background-color: var(--bg300);
 }
