@@ -65,7 +65,7 @@ body.dark .form-content {
 .form-field-wrap {
   width: 100%;
   display: grid;
-  grid-template-columns: 200px min-content 1fr;
+  grid-template-columns: 200px auto;
   column-gap: 2rem;
   /* margin-bottom: var(--r16); */
 }
@@ -76,7 +76,7 @@ body.dark .form-content {
 }
 
 .form-input {
-  width: 768px;
+  width: 100%;
   padding: 6px var(--r16);
 }
 .big {
@@ -86,7 +86,7 @@ body.dark .form-content {
   background-color: var(--bg250);
 }
 .form-btn-wrap {
-  width: 768px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;

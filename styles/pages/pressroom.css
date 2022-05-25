@@ -46,6 +46,21 @@ body.dark .banner-section {
   margin-left: var(--r30);
   white-space: nowrap;
 }
+.r-overlay-container {
+  background-color: var(--accent);
+  width: 120px;
+  height: 120px;
+  display: flex;
+  margin-right: auto;
+  align-items: flex-start;
+  margin-bottom: var(--r30);
+}
+
+.r-overlay-container p {
+  margin-top: var(--r30);
+  margin-left: var(--r30);
+  white-space: nowrap;
+}
 .other_articles-section {
   margin-top: var(--r72);
   margin-bottom: var(--r72);
