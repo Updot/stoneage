@@ -33,7 +33,7 @@
 }
 
 .overlay-container p {
-  margin-top: var(--r72);
+  margin-top: var(--r30);
   margin-left: var(--r64);
   white-space: nowrap;
 }
