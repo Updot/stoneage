@@ -173,6 +173,7 @@ body.dark .nav_serach_bar-btn {
   }
   .mob-nav_section-category-list {
     position: absolute;
+    z-index: 20;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,6 +215,7 @@ body.dark .nav_serach_bar-btn {
   }
   .sub_nav_items {
     position: absolute;
+    z-index: 20;
     flex-direction: column;
     align-items: center;
     row-gap: 0rem;
