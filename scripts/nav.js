@@ -50,7 +50,8 @@ const handleThemeIconChange = () => {
 // sub nav toggle
 function toggleNavLogo() {
   sub_nav.classList.contains("active") ||
-  search_bar.classList.contains("active")
+  search_bar.classList.contains("active") ||
+  mob_dropdown.classList.contains("active")
     ? body.classList.value === "dark"
       ? (nav_item_logo.src = "./assets/active-dark-logo.svg")
       : (nav_item_logo.src = "./assets/active-light-logo.svg")

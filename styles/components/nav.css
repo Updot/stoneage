@@ -195,7 +195,10 @@ body.dark .nav_serach_bar-btn {
     border-radius: 8px;
   }
   .mobile-nav_item_category {
-    background-color: var(--bg100);
+    background-color: var(--bg150);
+    -webkit-box-shadow: 5px 18px 31px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 5px 18px 31px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 18px 31px 0px rgba(0, 0, 0, 0.25);
   }
   body.dark .mobile-nav_item_category {
     background-color: var(--bg300);
@@ -235,7 +238,10 @@ body.dark .nav_serach_bar-btn {
     border-radius: 8px;
   }
   .sub_nav_item {
-    background-color: var(--bg100);
+    background-color: var(--bg150);
+    -webkit-box-shadow: 5px 18px 31px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 5px 18px 31px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 18px 31px 0px rgba(0, 0, 0, 0.25);
   }
   body.dark .sub_nav_item {
     background-color: var(--bg300);
