@@ -39,9 +39,10 @@ class Article {
   _renderPagination(data, pageNum) {
     const pagination = document.querySelector(".pagenum_container");
     pagination.innerHTML = "";
-    const totalPages = window.innerWidth > 768 ? 5 : 3;
-    if (totalPages > 1) {
-      for (let i = 1; i <= totalPages; i++) {
+    const firstFive = window.innerWidth > 768 ? 5 : 3;
+    const totalPages = Math.ceil(data.length / 5);
+    if (firstFive > 1) {
+      for (let i = 1; i <= firstFive; i++) {
         const pagenum_btn = document.createElement("button");
         pagenum_btn.classList.add("pagenum_btn");
         pagenum_btn.innerHTML = i;
@@ -54,14 +55,16 @@ class Article {
 
     const prevNav = document.querySelector(".navigation-btn-p");
     const nextNav = document.querySelector(".navigation-btn-n");
-    if (pageNum === 1) {
+
+    if (pageNum === 1 || totalPages === 1 || data.length === 0) {
       prevNav.classList.add("disabled");
       prevNav.classList.add("inactive");
     } else {
       prevNav.classList.remove("disabled");
       prevNav.classList.remove("inactive");
     }
-    if (pageNum === totalPages) {
+
+    if (pageNum === totalPages || totalPages === 1 || data.length === 0) {
       nextNav.classList.add("disabled");
       nextNav.classList.add("inactive");
     } else {
@@ -91,6 +94,7 @@ pagination.addEventListener("click", (e) => {
   }
 });
 
+// Handle the next button
 const handleNavigateNext = () => {
   const currentPage = parseInt(pagination.querySelector(".active").innerHTML);
   const totalPages = parseInt(
@@ -101,6 +105,7 @@ const handleNavigateNext = () => {
   }
 };
 
+// Handle the previous button
 const handleNavigatePrev = () => {
   const currentPage = parseInt(pagination.querySelector(".active").innerHTML);
   const firstPage = parseInt(
@@ -110,6 +115,18 @@ const handleNavigatePrev = () => {
     handleArticlesFetch(currentPage - 1);
   }
 };
+
+// search
+const search = document.querySelector(".nav_search_bar");
+search.addEventListener("keyup", async (e) => {
+  const searchTerm = e.target.value;
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+  const data = await response.json();
+  const filteredData = data.filter((post) => {
+    return post.title.toLowerCase().includes(searchTerm.toLowerCase());
+  });
+  articlesInstance.render(filteredData.length > 0 ? filteredData : data, 1);
+});
 //Story slider
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",

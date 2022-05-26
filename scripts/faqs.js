@@ -7,7 +7,9 @@ $(() => {
       type: "GET",
       success: (data) => {
         let results = data.filter((item) => {
-          return search && item.title.toLowerCase().includes(search);
+          return (
+            search && item.title.toLowerCase().includes(search.toLowerCase())
+          );
         });
         results.length > 0
           ? $("#faq-search-results").addClass("active")
