@@ -1,62 +1,17 @@
-const article_wrapper = document.querySelector(".article_wrapper");
-
-const handleArticlesFetch = async () => {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
-  const data = await response.json();
-  _numOfPages(data.slice(0, 35));
-
-  const articles = data.slice(0, 5);
-  const pagenum_btns = document.querySelectorAll(".pagenum_btn");
-  pagenum_btns[0].classList.add("active");
-  _renderArticles(1, articles);
-};
-
-handleArticlesFetch();
-
-const _numOfPages = (data) => {
-  const numOfPages = Math.ceil(data.length / 5);
-  console.log(numOfPages);
-  const pagenum_container = document.querySelector(".pagenum_container");
-  for (let i = 1; i <= numOfPages; i++) {
-    const pagenum_btn = document.createElement("div");
-    pagenum_btn.classList.add("pagenum_btn");
-    pagenum_btn.innerHTML = `<a href="#">${i}</a>`;
-    pagenum_container.appendChild(pagenum_btn);
+class Article {
+  constructor() {
+    this.article_wrapper = document.querySelector(".article_wrapper");
+    // this.article_wrapper.classList.add("loading");
+    // this.article_wrapper.classList.remove("loading");
   }
-  const pagenum_btns = document.querySelectorAll(".pagenum_btn");
-  pagenum_btns.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const pageNum = e.target.textContent;
-      _renderArticles(pageNum, data);
-      pagenum_btns.forEach((btn) => {
-        btn.classList.remove("active");
-      });
-      e.target.classList.add("active");
-    });
-  });
-};
 
-const handlePrevBtn = () => {
-  const prevBtn = document.querySelector(".navigation-btn-p");
-  prevBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    const pageNum = document.querySelector(".pagenum_btn.active").textContent;
-    if (pageNum > 1) {
-      _renderArticles(pageNum - 1, data);
-    }
-    // prevBtn.click();
-  });
-};
-
-const _renderArticles = (pageNum, data) => {
-  const articles = data.slice((pageNum - 1) * 5, pageNum * 5);
-  // console.log(articles);
-  article_wrapper.innerHTML = "";
-  articles.forEach((post) => {
-    const articleItem = document.createElement("div");
-    articleItem.classList.add("article_container");
-    articleItem.innerHTML = `
+  render(data, pageNum) {
+    this.article_wrapper.innerHTML = "";
+    const articles = data.slice((pageNum - 1) * 5, pageNum * 5);
+    articles.forEach((post) => {
+      const articleItem = document.createElement("div");
+      articleItem.classList.add("article_container");
+      articleItem.innerHTML = `
         <div class="article_image-wrapper">
           <img src="assets/articles.svg" alt="article image" />
         </div>
@@ -76,10 +31,86 @@ const _renderArticles = (pageNum, data) => {
 
         </div>
         `;
-    article_wrapper.appendChild(articleItem);
-  });
+      this.article_wrapper.appendChild(articleItem);
+    });
+    this._renderPagination(data, pageNum);
+  }
+
+  _renderPagination(data, pageNum) {
+    const pagination = document.querySelector(".pagenum_container");
+    pagination.innerHTML = "";
+    const totalPages = window.innerWidth > 768 ? 5 : 3;
+    if (totalPages > 1) {
+      for (let i = 1; i <= totalPages; i++) {
+        const pagenum_btn = document.createElement("button");
+        pagenum_btn.classList.add("pagenum_btn");
+        pagenum_btn.innerHTML = i;
+        if (i === pageNum) {
+          pagenum_btn.classList.add("active");
+        }
+        pagination.appendChild(pagenum_btn);
+      }
+    }
+
+    const prevNav = document.querySelector(".navigation-btn-p");
+    const nextNav = document.querySelector(".navigation-btn-n");
+    if (pageNum === 1) {
+      prevNav.classList.add("disabled");
+      prevNav.classList.add("inactive");
+    } else {
+      prevNav.classList.remove("disabled");
+      prevNav.classList.remove("inactive");
+    }
+    if (pageNum === totalPages) {
+      nextNav.classList.add("disabled");
+      nextNav.classList.add("inactive");
+    } else {
+      nextNav.classList.remove("disabled");
+      nextNav.classList.remove("inactive");
+    }
+  }
+}
+
+// Instantiate the Article class
+const articlesInstance = new Article();
+
+// Get the data from the server
+const handleArticlesFetch = async (pageNum) => {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+  const data = await response.json();
+  articlesInstance.render(data, pageNum ? pageNum : 1);
+};
+handleArticlesFetch();
+
+// Pagination
+const pagination = document.querySelector(".pagenum_container");
+pagination.addEventListener("click", (e) => {
+  if (e.target.classList.contains("pagenum_btn")) {
+    const pageNum = parseInt(e.target.innerHTML);
+    handleArticlesFetch(pageNum);
+  }
+});
+
+const handleNavigateNext = () => {
+  const currentPage = parseInt(pagination.querySelector(".active").innerHTML);
+  const totalPages = parseInt(
+    pagination.querySelector(".pagenum_btn:last-child").innerHTML
+  );
+  if (currentPage < totalPages) {
+    handleArticlesFetch(currentPage + 1);
+  }
 };
 
+const handleNavigatePrev = () => {
+  const currentPage = parseInt(pagination.querySelector(".active").innerHTML);
+  const firstPage = parseInt(
+    pagination.querySelector(".pagenum_btn:first-child").innerHTML
+  );
+  if (currentPage > firstPage) {
+    handleArticlesFetch(currentPage - 1);
+  }
+};
+//Story slider
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",
   grabCursor: true,

@@ -158,6 +158,10 @@ body.dark .pagination_container {
   column-gap: 1rem;
   cursor: pointer;
 }
+.navigation-btn-p.inactive,
+.navigation-btn-n.inactive {
+  opacity: 0.6;
+}
 .navigation-btn-n > svg,
 .navigation-btn-p > svg {
   width: 100px;
@@ -179,6 +183,7 @@ body.dark .pagination_container {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease-out;
 }
 .pagenum_btn {
   border: solid var(--bg400) 1px;
