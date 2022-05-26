@@ -9,6 +9,10 @@ const header_logo = document.querySelector(".header_logo");
 const nav_item_logo = document.querySelector(".nav_item_logo");
 const dropdown_btn = document.querySelector(".active-category");
 const mob_dropdown = document.querySelector(".mob-nav_dropdown");
+const desktopNavCategory = document.querySelector(".nav_section-category");
+const mobileNavCategory = document.querySelector(
+  ".mob-nav_section-category-list"
+);
 
 // theme fetch
 window.onload = () => {
@@ -76,7 +80,6 @@ document.addEventListener("click", (e) => {
 });
 
 // category toggle
-
 const handleCategoryDropdownToggle = () => {
   dropdown_btn.classList.toggle("active");
   mob_dropdown.classList.toggle("active");
@@ -115,4 +118,25 @@ document.addEventListener("click", (e) => {
   ) {
     closeSearch();
   }
+});
+
+const categoriesArr = ["lifestyle", "entertainment", "health", "biology"];
+const mob_active_category = document.querySelector(".active-category");
+mob_active_category.innerHTML = `
+<a href="javascript:void(0)" class="t-tagline-50r" onclick="handleCategoryDropdownToggle()">${categoriesArr[0]}</a>
+`;
+categoriesArr.forEach((category) => {
+  const desk_category_btn = document.createElement("button");
+  desk_category_btn.classList.add("nav_item_category");
+  desk_category_btn.innerHTML = `
+  <a href="#" class="t-tagline-50r">${category}</a>
+  `;
+  desktopNavCategory.appendChild(desk_category_btn);
+  // mobileNavCategory.innerHTML = "";
+  const mob_category_btn = document.createElement("button");
+  mob_category_btn.classList.add("mobile-nav_item_category");
+  mob_category_btn.innerHTML = `
+  <a href="#" class="t-tagline-50r">${category}</a>
+  `;
+  mobileNavCategory.appendChild(mob_category_btn);
 });
