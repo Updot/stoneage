@@ -98,14 +98,14 @@ body.dark .nav_search_btn > svg > path {
 body.dark .search_bar-container > input {
   border-bottom: var(--bg100) solid thin;
 }
-.nav_serach_bar-btn {
+.nav_search_bar-btn {
   padding: calc(var(--r16)) var(--r30);
 }
-.nav_serach_bar-btn {
+.nav_search_bar-btn {
   background-color: var(--bg250);
   color: var(--text200);
 }
-body.dark .nav_serach_bar-btn {
+body.dark .nav_search_bar-btn {
   background-color: var(--bg450);
   color: var(--text100);
 }
@@ -271,11 +271,11 @@ body.dark .nav_serach_bar-btn {
   }
   .search_bar-container > input {
     width: 200px;
-    padding: calc(var(--r16)) 0;
+    padding: 8px;
     background: transparent;
   }
 
-  .nav_serach_bar-btn {
+  .nav_search_bar-btn {
     padding: calc(var(--r16) / 2) var(--r16);
     order: 3;
   }
