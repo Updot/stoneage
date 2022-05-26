@@ -274,13 +274,13 @@
                     </div>
                 </div>
                 <div class="contact-content col-9">
-                    <form action="#" class="contact-form">
+                    <form action="https://formspree.io/f/xzbooryq" method="POST" class="contact-form">
                         <div class="contact-input-container">
                             <div class="contact-field-wrap">
                                 <label for="name" class="t-tagline-100r">
                                     Name
                                 </label>
-                                <input type="text" id="name" class="contact-input">
+                                <input required name="name" type="text" id="name" class="contact-input">
                             </div>
                         </div>
                         <div class="contact-input-container">
@@ -288,7 +288,7 @@
                                 <label for="detail1" class="t-tagline-100r">
                                     Details
                                 </label>
-                                <input type="text" id="detail1" class="contact-input">
+                                <input required name="detail1" type="text" id="detail1" class="contact-input">
                             </div>
                         </div>
                         <div class="contact-input-container">
@@ -296,7 +296,7 @@
                                 <label for="detail2" class="t-tagline-100r">
                                     Details
                                 </label>
-                                <input type="text" id="detail2" class="contact-input">
+                                <input required name="detail2" type="text" id="detail2" class="contact-input">
                             </div>
                         </div>
                         <div class="contact-input-container">
@@ -304,11 +304,11 @@
                                 <label for="detail2" class="t-tagline-100r">
                                     Details
                                 </label>
-                                <input type="text" id="detail2" class="contact-input">
+                                <input name="detail3" type="text" id="detail2" class="contact-input">
                             </div>
                         </div>
                         <div class="contact-btn-wrap">
-                            <button class="contact-btn">
+                            <button class="contact-btn" type="submit">
                                 <small class="btn-label t-tagline-100m">Send</small>
                                 <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -374,6 +374,7 @@
         </footer>
     </main>
     <script src="scripts/nav.js"></script>
+    <script src="scripts/form.js"></script>
 </body>
 
 </html>

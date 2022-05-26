@@ -133,13 +133,14 @@
                     </p>
                 </div>
                 <div class="form-content col-9">
-                    <form action="#" class="form-container">
+                    <form action="https://formspree.io/f/mzboorkn" method="POST" enctype="multipart/form-data"
+                        class="form-container">
                         <div class="form-input-container">
                             <div class="form-field-wrap">
                                 <label for="name" class="t-tagline-100r">
                                     Name
                                 </label>
-                                <input type="text" id="name" class="form-input">
+                                <input required name="name" type="text" id="name" class="form-input">
                             </div>
                         </div>
                         <div class="form-input-container">
@@ -147,20 +148,20 @@
                                 <label for="detail1" class="t-tagline-100r">
                                     Details
                                 </label>
-                                <input type="text" id="detail1" class="form-input">
-                            </div>
-                        </div>
-                        <div class="form-input-container">
-                            <div class="form-field-wrap">
-                                <label for="detail1" class="t-tagline-100r">
-                                    Details
-                                </label>
-                                <input type="text" id="detail1" class="form-input">
+                                <input required name="detail1" type="text" id="detail1" class="form-input">
                             </div>
                         </div>
                         <div class="form-input-container">
                             <div class="form-field-wrap">
                                 <label for="detail2" class="t-tagline-100r">
+                                    Details
+                                </label>
+                                <input required name="detail2" type="text" id="detail2" class="form-input">
+                            </div>
+                        </div>
+                        <div class="form-input-container">
+                            <div class="form-field-wrap">
+                                <label for="social_links" class="t-tagline-100r">
                                     Other public links
                                     to demonstrate your
                                     works eg:
@@ -168,16 +169,18 @@
                                     Blog post, article.
 
                                 </label>
-                                <textarea type="text" id="detail2" class="form-input big"></textarea>
+                                <textarea name="social_links" type="text" id="social_links"
+                                    class="form-input big"></textarea>
                             </div>
                         </div>
                         <div class="form-input-container">
                             <div class="form-field-wrap">
-                                <label for="detail2" class="t-tagline-100r">
+                                <label for="additional" class="t-tagline-100r">
                                     Any additional information you
                                     would like to share
                                 </label>
-                                <textarea type="text" id="detail2" class="form-input big"></textarea>
+                                <textarea name="additional_info" type="text" id="additional"
+                                    class="form-input big"></textarea>
                             </div>
                         </div>
                         <div class="form-input-container">
@@ -187,8 +190,11 @@
                                 </label>
                                 <div class="form-btn-wrap">
                                     <div class="file-upload-wrap">
-                                        <button class="upload-btn">
-                                            <small class="btn-label t-tagline-100m">Choose file</small>
+                                        <button type="file" class="upload-btn">
+
+                                            <small class="btn-label t-tagline-100m">Choose file
+                                                <!-- <input type="file" name="resume" style="opacity: 0;"> -->
+                                            </small>
                                             <svg width="22" height="21" viewBox="0 0 22 21" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -208,7 +214,7 @@
                                         </button>
                                         <small class="t-tagline-50r">No file selected</small>
                                     </div>
-                                    <button class="submit-btn">
+                                    <button class="submit-btn" type="submit">
                                         <small class="btn-label t-tagline-100m">Send</small>
                                     </button>
                                 </div>
@@ -260,6 +266,7 @@
         </footer>
     </main>
     <script src="scripts/nav.js"></script>
+    <script src="scripts/form.js"></script>
 </body>
 
 </html>

@@ -103,13 +103,13 @@
                     </p>
                 </div>
                 <div class="form-content col-9">
-                    <form action="#" class="form-container">
+                    <form action="https://formspree.io/f/xgeddkdw" method="POST" class="form-container">
                         <div class="form-input-container">
                             <div class="form-field-wrap">
                                 <label for="name" class="t-tagline-100r">
                                     Name
                                 </label>
-                                <input type="text" id="name" class="form-input">
+                                <input required name="name" type="text" id="name" class="form-input">
                             </div>
                         </div>
                         <div class="form-input-container">
@@ -117,7 +117,7 @@
                                 <label for="detail1" class="t-tagline-100r">
                                     Mail
                                 </label>
-                                <input type="text" id="detail1" class="form-input">
+                                <input required name="email" type="text" id="detail1" class="form-input">
                             </div>
                         </div>
                         <div class="form-textarea-container">
@@ -125,7 +125,7 @@
                                 <label for="detail2" class="t-tagline-100r">
                                     Feedback
                                 </label>
-                                <textarea type="text" id="detail2" class="form-input big"></textarea>
+                                <textarea name="feedback" type="text" id="detail2" class="form-input big"></textarea>
                             </div>
                         </div>
                         <div class="form-input-container">
@@ -136,7 +136,7 @@
                                 <div class="form-btn-wrap">
                                     <div class="file-upload-wrap">
                                     </div>
-                                    <button class="submit-btn">
+                                    <button class="submit-btn" type="submit">
                                         <small class="btn-label t-tagline-100m">Send</small>
                                         <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -200,6 +200,7 @@
         </footer>
     </main>
     <script src="scripts/nav.js"></script>
+    <script src="scripts/form.js"></script>
 </body>
 
 </html>
