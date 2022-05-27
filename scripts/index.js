@@ -78,10 +78,13 @@ class Article {
 const articlesInstance = new Article();
 
 // Get the data from the server
-const handleArticlesFetch = async (pageNum) => {
+const handleArticlesFetch = async (pageNum, start, end) => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
   const data = await response.json();
-  articlesInstance.render(data, pageNum ? pageNum : 1);
+  articlesInstance.render(
+    data.slice(start ? start : 0, end ? end : 25),
+    pageNum ? pageNum : 1
+  );
 };
 handleArticlesFetch();
 
@@ -127,6 +130,28 @@ search.addEventListener("keyup", async (e) => {
   });
   articlesInstance.render(filteredData.length > 0 ? filteredData : data, 1);
 });
+
+//change by category
+const handleChangeCategory = (label, e) => {
+  switch (label) {
+    case "lifestyle":
+      handleArticlesFetch(1, 0, 25);
+      break;
+    case "entertainment":
+      handleArticlesFetch(1, 25, 50);
+      break;
+    case "health":
+      handleArticlesFetch(1, 50, 75);
+      break;
+    case "biology":
+      handleArticlesFetch(1, 75, 100);
+      break;
+
+    default:
+      break;
+  }
+};
+
 //Story slider
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",

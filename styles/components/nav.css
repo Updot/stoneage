@@ -62,7 +62,7 @@ body.dark .nav_item_category:hover {
   color: var(--text200);
 }
 
-.nav_item_category.active {
+.nav_item_category:active {
   background-color: var(--bg300);
   color: var(--text100);
 }

@@ -96,6 +96,35 @@ document.addEventListener("click", (e) => {
     mob_dropdown.classList.contains("active") &&
     closeCategoryDropDown();
 });
+// categorylist
+const categoriesArr = ["lifestyle", "entertainment", "health", "biology"];
+const mob_active_category = document.querySelector(".active-category");
+mob_active_category.innerHTML = `
+<a href="javascript:void(0)" class="t-tagline-50r" onclick="handleCategoryDropdownToggle()">${categoriesArr[0]}</a>
+`;
+categoriesArr.forEach((category) => {
+  const desk_category_btn = document.createElement("button");
+  desk_category_btn.classList.add("nav_item_category");
+  desk_category_btn.setAttribute(
+    "onclick",
+    `handleChangeCategory('${category}', event)`
+  );
+  desk_category_btn.innerHTML = `
+  <label class="t-tagline-50r">${category}</label>
+  `;
+  desktopNavCategory.appendChild(desk_category_btn);
+  // mobileNavCategory.innerHTML = "";
+  const mob_category_btn = document.createElement("button");
+  mob_category_btn.classList.add("mobile-nav_item_category");
+  mob_category_btn.setAttribute(
+    "onclick",
+    `handleChangeCategory('${category}', event)`
+  );
+  mob_category_btn.innerHTML = `
+  <button class="t-tagline-50r">${category}</button>
+  `;
+  mobileNavCategory.appendChild(mob_category_btn);
+});
 
 // search
 const handleSearchBarToggle = () => {
@@ -118,25 +147,4 @@ document.addEventListener("click", (e) => {
   ) {
     closeSearch();
   }
-});
-
-const categoriesArr = ["lifestyle", "entertainment", "health", "biology"];
-const mob_active_category = document.querySelector(".active-category");
-mob_active_category.innerHTML = `
-<a href="javascript:void(0)" class="t-tagline-50r" onclick="handleCategoryDropdownToggle()">${categoriesArr[0]}</a>
-`;
-categoriesArr.forEach((category) => {
-  const desk_category_btn = document.createElement("button");
-  desk_category_btn.classList.add("nav_item_category");
-  desk_category_btn.innerHTML = `
-  <a href="#" class="t-tagline-50r">${category}</a>
-  `;
-  desktopNavCategory.appendChild(desk_category_btn);
-  // mobileNavCategory.innerHTML = "";
-  const mob_category_btn = document.createElement("button");
-  mob_category_btn.classList.add("mobile-nav_item_category");
-  mob_category_btn.innerHTML = `
-  <a href="#" class="t-tagline-50r">${category}</a>
-  `;
-  mobileNavCategory.appendChild(mob_category_btn);
 });
