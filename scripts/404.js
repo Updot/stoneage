@@ -8,8 +8,16 @@ window.onload = () => {
   handleBannerChange();
 };
 
+window.resize = () => {
+  handleBannerChange();
+};
+
 const handleBannerChange = () => {
-  body.classList.value === "dark"
-    ? (banner.src = "./assets/404-banner-dark.svg")
-    : (banner.src = "./assets/404-banner-light.svg");
+  window.innerWidth > 480
+    ? body.classList.value === "dark"
+      ? (banner.src = "./assets/404-banner-dark.svg")
+      : (banner.src = "./assets/404-banner-light.svg")
+    : body.classList.value === "dark"
+    ? (banner.src = "./assets/404-banner-mob-dark.svg")
+    : (banner.src = "./assets/404-banner-mob-light.svg");
 };
