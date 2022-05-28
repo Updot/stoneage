@@ -133,6 +133,11 @@ search.addEventListener("keyup", async (e) => {
 
 //change by category
 const handleChangeCategory = (label, e) => {
+  const btns = document.querySelectorAll(".nav_item_category");
+  btns.forEach((btn) => {
+    btn.classList.remove("active");
+    e ? e.target.classList.add("active") : btns[0].classList.add("active");
+  });
   switch (label) {
     case "lifestyle":
       handleArticlesFetch(1, 0, 25);
@@ -152,6 +157,29 @@ const handleChangeCategory = (label, e) => {
   }
 };
 
+const handleChangeMobCategory = (label, e) => {
+  const mob_active_category = document.querySelector(".active-category");
+  mob_active_category.innerHTML = `
+  <a href="javascript:void(0)" class="t-tagline-50r" onclick="handleCategoryDropdownToggle()">${label}</a>
+  `;
+  switch (label) {
+    case "lifestyle":
+      handleArticlesFetch(1, 0, 25);
+      break;
+    case "entertainment":
+      handleArticlesFetch(1, 25, 50);
+      break;
+    case "health":
+      handleArticlesFetch(1, 50, 75);
+      break;
+    case "biology":
+      handleArticlesFetch(1, 75, 100);
+      break;
+
+    default:
+      break;
+  }
+};
 //Story slider
 var swiper = new Swiper(".mySwiper", {
   effect: "coverflow",

@@ -105,23 +105,27 @@ mob_active_category.innerHTML = `
 categoriesArr.forEach((category) => {
   const desk_category_btn = document.createElement("button");
   desk_category_btn.classList.add("nav_item_category");
+  desk_category_btn.classList.add("t-tagline-50r");
   desk_category_btn.setAttribute(
     "onclick",
     `handleChangeCategory('${category}', event)`
   );
   desk_category_btn.innerHTML = `
-  <label class="t-tagline-50r">${category}</label>
+  ${category}
   `;
   desktopNavCategory.appendChild(desk_category_btn);
+  desktopNavCategory.firstElementChild.classList.add("active");
+
   // mobileNavCategory.innerHTML = "";
   const mob_category_btn = document.createElement("button");
   mob_category_btn.classList.add("mobile-nav_item_category");
+  mob_category_btn.classList.add("t-tagline-50r");
   mob_category_btn.setAttribute(
     "onclick",
-    `handleChangeCategory('${category}', event)`
+    `handleChangeMobCategory('${category}', event)`
   );
   mob_category_btn.innerHTML = `
-  <button class="t-tagline-50r">${category}</button>
+  ${category}<
   `;
   mobileNavCategory.appendChild(mob_category_btn);
 });
