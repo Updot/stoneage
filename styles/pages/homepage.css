@@ -324,7 +324,7 @@ body.dark .about_section-area2 {
 .about_content {
   padding: var(--r64) var(--r48);
   color: var(--text100);
-  width: 400px;
+  width: 480px;
 }
 .about_content h3 {
   padding-bottom: var(--r48);

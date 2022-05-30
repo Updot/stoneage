@@ -3,6 +3,7 @@
   height: 100vh;
   background-color: var(--bg100);
   overflow: hidden;
+  padding-top: var(--r100);
 }
 body.dark .main {
   background-color: var(--bg300);
@@ -53,6 +54,9 @@ body.dark .main {
   top: 75%;
 }
 @media (max-width: 480px) {
+  .main {
+    padding-top: var(--r16);
+  }
   .banner-image {
     /* object-fit: cover; */
     top: unset;
