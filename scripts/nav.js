@@ -85,7 +85,15 @@ const handleSubNavToggle = () => {
   sub_nav.classList.toggle("active");
   toggleNavLogo();
 };
+nav_item_logo.addEventListener("mouseover", () => {
+  body.classList.value === "dark"
+    ? (nav_item_logo.src = "./assets/active-dark-logo.svg")
+    : (nav_item_logo.src = "./assets/active-light-logo.svg");
+});
 
+nav_item_logo.addEventListener("mouseout", () => {
+  nav_item_logo.src = "./assets/logo2.svg";
+});
 function closeSubNav() {
   sub_nav.classList.remove("active");
   sub_nav_btn.classList.remove("active");

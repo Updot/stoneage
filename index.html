@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="styles/pages/homepage.css" />
   <link rel="stylesheet" href="styles/components/nav.css" />
   <link rel="stylesheet" href="styles/components/footer.css" />
+  <link rel="stylesheet" href="styles/pages/stories.css">
+
   <title>Stone Age</title>
 </head>
 
@@ -71,7 +73,7 @@
               <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <div class="story-card"
+                    <div class="story-card" onclick="handleTogglePreview()"
                       style="background-image: url(https://images.unsplash.com/photo-1507136566006-cfc505b114fc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Y2FyfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60)">
                       <div class="story-desc">
                         <p class="t-tagline-100m">
@@ -92,7 +94,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="story-card"
+                    <div class="story-card" onclick="handleTogglePreview()"
                       style="background-image: url(https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dGVjaHxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60)">
                       <div class="story-desc">
                         <p class="t-tagline-100m">
@@ -113,7 +115,7 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="story-card"
+                    <div class="story-card" onclick="handleTogglePreview()"
                       style="background-image: url(https://images.unsplash.com/photo-1568613444605-b8b0de479bed?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fG5ld3NwYXBlcnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60)">
                       <div class="story-desc">
                         <p class="t-tagline-100m">
@@ -149,6 +151,75 @@
         </div>
       </div>
     </div>
+    <!-- Stories Overlay -->
+    <div class="preview-container">
+      <!-- Storyline -->
+      <span class="story-prev-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-compact-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z" />
+        </svg>
+      </span>
+      <div class="storyline">
+        <div class="storyline-header">
+          <!-- <h6 class="storyline-title">storyline</h6> -->
+        </div>
+        <div class="storyline-slider">
+          <div class="storyline-slide">
+            <img
+              src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?cs=srgb&dl=pexels-yurii-hlei-1545743.jpg&fm=jpg"
+              alt="" class="storyline-image">
+            <div class="storyline-text t-tagline-100m text-x-left text-y-bottom">Lorem ipsum dolor sit amet
+              consectetur
+              adipisicing
+              elit</div>
+          </div>
+          <div class="storyline-slide">
+            <img
+              src="https://images.pexels.com/photos/3879208/pexels-photo-3879208.png?cs=srgb&dl=pexels-musa-orta%C3%A7-3879208.jpg&fm=jpg"
+              alt="" class="storyline-image">
+            <div class="storyline-text t-tagline-100m text-x-left text-y-bottom">Lorem ipsum dolor sit amet
+              consectetur
+              adipisicing
+              elit. Magni, rerum?</div>
+          </div>
+          <div class="storyline-slide">
+            <img
+              src="https://images.pexels.com/photos/1231643/pexels-photo-1231643.jpeg?cs=srgb&dl=pexels-sourav-mishra-1231643.jpg&fm=jpg"
+              alt="" class="storyline-image">
+            <div class="storyline-text t-tagline-100m text-x-left text-y-bottom">Lorem ipsum dolor sit amet
+            </div>
+          </div>
+          <div class="storyline-slide">
+            <img
+              src="https://images.pexels.com/photos/3182530/pexels-photo-3182530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="" class="storyline-image">
+            <div class="storyline-text t-tagline-100m text-x-left text-y-bottom">Lorem ipsum dolor sit amet
+            </div>
+          </div>
+        </div>
+        <div class="storyline-footer">
+          <img src="assets/author-avatar.svg" alt="" class="storyline-image-author">
+          <span class="storyline-author t-tagline-50r">Jon Doe</span>
+          <!-- <a href="#" class="storyline-btn">Follow</a> -->
+        </div>
+      </div>
+      <span class="story-next-nav">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-chevron-compact-left"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z" />
+        </svg>
+      </span>
+      <span class="close-stories" onclick="handleTogglePreview()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#fff" class="bi bi-x" viewBox="0 0 16 16">
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+      </span>
+    </div>
+
     <!--                                                Navbar                                                            -->
     <nav>
       <div class="nav_main">
@@ -223,7 +294,7 @@
       <div class="search_bar">
         <div class="search_bar-container">
           <input type="search" class="nav_search_bar" />
-          <button class="nav_search_bar-btn">search</button>
+          <button class="nav_search_bar-btn t-tagline-100r">search</button>
         </div>
       </div>
     </nav>
@@ -443,6 +514,8 @@
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="scripts/index.js"></script>
   <script src="scripts/nav.js"></script>
+  <script src="scripts/stories.js"></script>
+
 </body>
 
 </html>
