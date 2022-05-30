@@ -80,13 +80,16 @@ body.dark {
   background-color: var(--bg200);
   transition: all 0.2s ease-out;
 }
+
 body.dark hr {
   border-color: var(--bg100);
 }
 body.dark svg path {
   stroke: var(--bg100);
 }
-
+body.fixed {
+  position: fixed;
+}
 img,
 video {
   max-width: 100%;

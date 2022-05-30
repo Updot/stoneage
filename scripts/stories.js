@@ -147,4 +147,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const handleTogglePreview = () => {
   document.querySelector(".preview-container").classList.toggle("active");
+  document.querySelector("body").classList.toggle("fixed");
 };
