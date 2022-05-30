@@ -10,10 +10,28 @@ const nav_item_logo = document.querySelector(".nav_item_logo");
 const dropdown_btn = document.querySelector(".active-category");
 const mob_dropdown = document.querySelector(".mob-nav_dropdown");
 const desktopNavCategory = document.querySelector(".nav_section-category");
+const nav = document.querySelector("nav");
 const mobileNavCategory = document.querySelector(
   ".mob-nav_section-category-list"
 );
 
+// Intersection Observer
+const navObserver = new IntersectionObserver(
+  (entries, navObserver) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        nav.classList.add("fixed");
+      } else {
+        nav.classList.remove("fixed");
+      }
+    });
+  },
+  {
+    threshold: [0],
+  }
+);
+
+navObserver.observe(document.querySelector(".banner-section"));
 // theme fetch
 window.onload = () => {
   const themeMode = localStorage.getItem("theme");
