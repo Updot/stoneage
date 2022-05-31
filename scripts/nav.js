@@ -32,7 +32,7 @@ const navObserver = new IntersectionObserver(
 );
 
 (window.location.pathname === "/" ||
-  window.location.pathname === "/stoneage") &&
+  window.location.pathname === "/stoneage/") &&
   navObserver.observe(document.querySelector(".banner-section"));
 
 // theme fetch
