@@ -31,7 +31,10 @@ const navObserver = new IntersectionObserver(
   }
 );
 
-navObserver.observe(document.querySelector(".banner-section"));
+(window.location.pathname === "/" ||
+  window.location.pathname === "/stoneage") &&
+  navObserver.observe(document.querySelector(".banner-section"));
+
 // theme fetch
 window.onload = () => {
   const themeMode = localStorage.getItem("theme");
