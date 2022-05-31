@@ -167,7 +167,7 @@ p {
 
 .t-heading-200m {
   font-family: var(--default-font);
-  font-size: clamp(20px, calc((28 / (var(--screen) / 100)) * 1vw), 32px);
+  font-size: clamp(16px, calc((20 / (var(--screen) / 100)) * 1vw), 32px);
   font-weight: 600;
   line-height: 1.33;
 }
@@ -253,7 +253,7 @@ p {
 
 .t-tagline-50r {
   font-family: var(--default-font);
-  font-size: clamp(11px, calc((13 / (var(--screen) / 100)) * 1vw), 14px);
+  font-size: clamp(11px, calc((13 / (var(--screen) / 100)) * 1vw), 13px);
   font-weight: 400;
   line-height: 1.85;
 }

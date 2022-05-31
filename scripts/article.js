@@ -10,6 +10,21 @@ const handleShareBtn = () => {
   share_options.classList.toggle("active");
 };
 
+document.addEventListener("click", (e) => {
+  if (share_options.classList.contains("active")) {
+    if (
+      !e.target.classList.contains("share_option-col") &&
+      !e.target.classList.contains("share_options-wrap") &&
+      !e.target.classList.contains("share-container") &&
+      !e.target.classList.contains("share-btn") &&
+      !e.target.classList.contains("share-btn-svg") &&
+      !e.target.classList.contains("share-btn-path")
+    ) {
+      share_options.classList.remove("active");
+    }
+  }
+});
+
 // API CALLS
 const handleCommentFetch = async () => {
   const response = await fetch(`https://jsonplaceholder.typicode.com/comments`);

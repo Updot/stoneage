@@ -8,15 +8,24 @@ class Article {
   render(data, pageNum) {
     this.article_wrapper.innerHTML = "";
     const articles = data.slice((pageNum - 1) * 5, pageNum * 5);
+    articles[articles.length % 3] = {
+      type: "ad",
+    };
+
     articles.forEach((post) => {
       const articleItem = document.createElement("div");
       articleItem.classList.add("article_container");
-      articleItem.innerHTML = `
+      articleItem.innerHTML =
+        post.type === "ad"
+          ? `<div class="article_ad-wrapper">
+            <h3 class="t-tagline-100r">*ADS</h3>  
+          </div>`
+          : `
         <div class="article_image-wrapper">
           <img src="assets/articles.svg" alt="article image" />
         </div>
         <div class="article_content-wrapper">
-          <h4 class="t-tagline-100m">${post.title}</h4>
+          <h4 class="t-heading-200m">${post.title}</h4>
           <p class="t-tagline-50r">
             ${post.body}
           </p>
